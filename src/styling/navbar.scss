@@ -1,0 +1,149 @@
+$blue: #342dfc;
+
+$mobile: 480px;
+$tablet: 800px;
+$laptop: 1024px;
+$desktop: 1300px;
+
+nav {
+  ul {
+    display: flex;
+    li {
+      list-style: none;
+      padding: 15px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.navbar_1 {
+  color: white;
+  ul {
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+.navbar_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  ul {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  img {
+    max-width: 55px;
+    object-fit: contain;
+    border-radius: 8px;
+    position: relative;
+    left: 0.5rem;
+  }
+}
+.navbar_1,
+.navbar_2 {
+  max-width: 1300px;
+  margin: 5px auto;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 2rem;
+  left: 1.1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.8rem;
+  height: 1.5rem;
+  span {
+    background-color: black;
+    height: 0.15rem;
+    width: 100%;
+    border-radius: 0.2rem;
+  }
+  @media (max-width: $tablet) {
+    display: flex;
+  }
+}
+.menu:hover {
+  cursor: pointer;
+}
+.navTab {
+  display: none;
+  height: 5rem;
+  width: 100%;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.nav_cont {
+  display: flex;
+  flex-direction: column;
+}
+.navbar_wrapper {
+  background-color: $blue;
+}
+.nav2_wrapper {
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+@media (max-width: $tablet) {
+  .navbar_1 {
+    flex-direction: column;
+    align-items: flex-start;
+    color: black;
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    li {
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+  .navbar_2 {
+    width: 100%;
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+    li {
+      width: 100%;
+      margin: 5px 0;
+    }
+    img {
+      position: absolute;
+      top: 0.5rem;
+      left: 50%;
+      right: 50%;
+      transform: translate(-50%);
+    }
+  }
+  .navbar_1 ul,
+  .navbar_2 ul {
+    display: none;
+  }
+  .navTab {
+    display: flex;
+  }
+  .nav_cont {
+    flex-direction: column-reverse;
+    .navbar_wrapper {
+      background-color: white;
+    }
+  }
+  ul.navOpen {
+    display: flex;
+  }
+  nav {
+    height: 100svh;
+  }
+  .nav2_wrapper {
+    box-shadow: rgba(255, 255, 255, 1) 0px 4px 8px -2px,
+      rgba(255, 255, 255, 1) 0px 0px 0px 1px;
+  }
+}
