@@ -10,10 +10,11 @@ nav {
     display: flex;
     li {
       list-style: none;
-      padding: 15px;
+      padding: 17px;
       &:hover {
         cursor: pointer;
       }
+      margin: 0 10px;
     }
   }
 }
@@ -29,23 +30,27 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 10%;
   ul {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
   }
   img {
-    max-width: 55px;
+    max-width: 50px;
     object-fit: contain;
     border-radius: 8px;
     position: relative;
     left: 0.5rem;
   }
+  svg{
+    display: none;
+  }
 }
 .navbar_1,
 .navbar_2 {
   max-width: 1300px;
-  margin: 5px auto;
+  margin: 0 auto;
 }
 
 .menu {
@@ -62,9 +67,6 @@ nav {
     height: 0.15rem;
     width: 100%;
     border-radius: 0.2rem;
-  }
-  @media (max-width: $tablet) {
-    display: flex;
   }
 }
 .menu:hover {
@@ -90,60 +92,60 @@ nav {
     rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
-@media (max-width: $tablet) {
-  .navbar_1 {
+.sidebar {
+  position: fixed;
+  top: 3.7rem;
+  left: 0;
+  height: 100vh;
+  background-color: white;
+  width: 100%;
+  display: none;
+  z-index: 1;
+  ul {
+    display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
-    color: black;
-    ul {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    li {
-      width: 100%;
-      margin: 5px 0;
-    }
-  }
-  .navbar_2 {
     width: 100%;
-    ul {
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-    }
     li {
       width: 100%;
-      margin: 5px 0;
-    }
-    img {
-      position: absolute;
-      top: 0.5rem;
-      left: 50%;
-      right: 50%;
-      transform: translate(-50%);
     }
   }
-  .navbar_1 ul,
-  .navbar_2 ul {
+}
+
+@media (max-width: $laptop) {
+  .navbar_1 {
     display: none;
   }
-  .navTab {
-    display: flex;
-  }
-  .nav_cont {
-    flex-direction: column-reverse;
-    .navbar_wrapper {
-      background-color: white;
+  .navbar_2 {
+    margin: 0;
+    padding: 5px;
+    ul {
+      display: none;
+      li {
+        margin: 20px 0;
+      }
+    }
+    img {
+      left: 0.5rem;
+    }
+    svg {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      display: flex;
+      &:hover {
+        cursor: pointer;
+      }
+      transition: all 0.75s ease-in-out;
     }
   }
-  ul.navOpen {
-    display: flex;
-  }
+
   nav {
-    height: 100svh;
-  }
-  .nav2_wrapper {
-    box-shadow: rgba(255, 255, 255, 1) 0px 4px 8px -2px,
-      rgba(255, 255, 255, 1) 0px 0px 0px 1px;
+    ul {
+      li {
+        margin: 10px 0;
+      }
+    }
   }
 }
