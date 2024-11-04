@@ -38,8 +38,8 @@ function ImageSlider({ slides }) {
       <img src={slides[currentIndex].url} alt="" style={sliderImageStyle} />
       <div className="overlayStyle">
         <div className="slider_content">
-          <h1>{slides[currentIndex].title}</h1>
-          <p className="title">
+          <p className="title">{slides[currentIndex].title}</p>
+          <p className="link">
             <a href={slides[currentIndex].link}>Read More</a>
           </p>
         </div>
