@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/I2U_REACT/static/css/main.fed641e9.css",
-    "main.js": "/I2U_REACT/static/js/main.6117da22.js",
+    "main.css": "/I2U_REACT/static/css/main.dd8a3487.css",
+    "main.js": "/I2U_REACT/static/js/main.e144118f.js",
     "static/js/453.8ab44547.chunk.js": "/I2U_REACT/static/js/453.8ab44547.chunk.js",
     "static/media/i2u_logo.jpg": "/I2U_REACT/static/media/i2u_logo.91a578ad6f500f4a38f1.jpg",
     "static/media/slider_image_2.jpg": "/I2U_REACT/static/media/slider_image_2.cf4f09aca70f0aea146c.jpg",
     "static/media/slider_image_1.jpeg": "/I2U_REACT/static/media/slider_image_1.269922d6b5edb3389694.jpeg",
     "static/media/slider_image_3.jpg": "/I2U_REACT/static/media/slider_image_3.7c12ee8a37765188b3b2.jpg",
     "index.html": "/I2U_REACT/index.html",
-    "main.fed641e9.css.map": "/I2U_REACT/static/css/main.fed641e9.css.map",
-    "main.6117da22.js.map": "/I2U_REACT/static/js/main.6117da22.js.map",
+    "main.dd8a3487.css.map": "/I2U_REACT/static/css/main.dd8a3487.css.map",
+    "main.e144118f.js.map": "/I2U_REACT/static/js/main.e144118f.js.map",
     "453.8ab44547.chunk.js.map": "/I2U_REACT/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fed641e9.css",
-    "static/js/main.6117da22.js"
+    "static/css/main.dd8a3487.css",
+    "static/js/main.e144118f.js"
   ]
 }
