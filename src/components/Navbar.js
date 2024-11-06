@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import "../styling/navbar.scss";
 import logo from "../Assets/icons/i2u_logo.jpg";
 
@@ -8,9 +9,11 @@ function Navbar() {
 
   useEffect(() => {
     const checkWidth = () => {
+      const sidebar = document.getElementById("sidebar");
       setIsMobile(window.innerWidth <= 1024);
       if (window.innerWidth > 1024) {
         setIsNavOpen(false);
+        sidebar.style.display = "none";
       }
     };
 
@@ -42,9 +45,15 @@ function Navbar() {
         <div className="navbar_wrapper">
           <div className="navbar_1">
             <ul>
-              <li>Login</li>
-              <li>Signup</li>
-              <li>Contact Us</li>
+              <li>
+                <NavLink to="/login">Login</NavLink>
+              </li>
+              <li>
+                <NavLink to="/Signup">Signup</NavLink>
+              </li>
+              <li>
+                <NavLink to="/Contact">Contact Us</NavLink>
+              </li>
             </ul>
           </div>
         </div>
@@ -75,9 +84,14 @@ function Navbar() {
                 )}
               </div>
             )}
-            <img src={logo} alt="i2u Logo" />
+            <NavLink to="/">
+              <img src={logo} alt="i2u Logo" />
+            </NavLink>
+
             <ul>
-              <li>Startups</li>
+              <li>
+                <NavLink to="/startups">Startup</NavLink>
+              </li>
               <li>Mentors</li>
               <li>Investors</li>
               <li>Accelerators</li>

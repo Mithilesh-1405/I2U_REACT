@@ -1,0 +1,100 @@
+$blue: #342dfc;
+
+$mobile: 480px;
+$tablet: 800px;
+$laptop: 1024px;
+$desktop: 1300px;
+
+.startups_container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.startups_search_box {
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: 1fr 25fr 8fr;
+  grid-template-rows: 1fr;
+  .search_grid_box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    grid-gap: 10px;
+    input {
+      border: 2px double rgba(52, 45, 252, 0);
+      background-color: rgba(240, 240, 240, 0.7);
+      height: 100%;
+      width: 80%;
+      border-radius: 25px;
+      padding: 15px 20px;
+      font-size: 16px;
+      font-weight: 500;
+      transition: border 0.2s ease-in-out;
+      &:focus-within {
+        outline: none;
+        border: 2px double rgba(52, 45, 252, 0.5);
+      }
+    }
+    p {
+      font-size: clamp(14px, 2vw, 18px);
+    }
+    select {
+      border-radius: 8px;
+      border: none;
+      background-color: rgba(240, 240, 240, 1);
+      padding: 10px;
+      option {
+        padding: 10px;
+        margin-top: 10px;
+      }
+      &:focus-within {
+        outline: none;
+      }
+    }
+  }
+  .search_grid_box:last-child {
+    justify-content: end;
+  }
+}
+
+.startups_post_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .startups_post_grid {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(5, minmax(150px, 300px));
+    grid-template-columns: repeat(4, 1fr);
+    .startup_grid_box {
+      background-color: rgba(240, 240, 240, 1);
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+.box1 {
+  grid-row: span 1;
+  grid-column: span 4;
+}
+
+@media (max-width: $laptop) {
+  .startups_post_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 880px) {
+  .startups_search_box {
+    grid-template-columns: 1fr 10fr 6fr;
+  }
+  .search_grid_box {
+    svg {
+      height: 24px;
+      width: 24px;
+    }
+  }
+}

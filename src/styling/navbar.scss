@@ -15,6 +15,9 @@ nav {
         cursor: pointer;
       }
       margin: 0 10px;
+      a {
+        text-decoration: none;
+      }
     }
   }
 }
@@ -23,6 +26,9 @@ nav {
   ul {
     justify-content: flex-end;
     align-items: center;
+  }
+  a {
+    color: white;
   }
 }
 .navbar_2 {
@@ -43,7 +49,7 @@ nav {
     position: relative;
     left: 0.5rem;
   }
-  svg{
+  svg {
     display: none;
   }
 }
