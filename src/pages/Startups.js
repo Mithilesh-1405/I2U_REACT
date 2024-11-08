@@ -7,7 +7,7 @@ function Startups() {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getPost")
+      .get("https://i2u-react-backend.onrender.com/getPost")
       .then((response) => {
         return response.data;
       })
