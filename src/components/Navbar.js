@@ -9,7 +9,7 @@ function Navbar() {
 
   useEffect(() => {
     const checkWidth = () => {
-      const sidebar = document.getElementById("sidebar");
+      const sidebar = document.querySelector(".sidebar");
       setIsMobile(window.innerWidth <= 1024);
       if (window.innerWidth > 1024) {
         setIsNavOpen(false);
@@ -36,11 +36,6 @@ function Navbar() {
   }
   return (
     <nav>
-      {/* <div className="menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div> */}
       <div className="nav_cont">
         <div className="navbar_wrapper">
           <div className="navbar_1">

@@ -1,6 +1,23 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
+import axios from "axios";
+import url from "../Assets/images/slider_image_2.jpg";
 import "../styling/startups.scss";
+
 function Startups() {
+  const [articles, setArticles] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/getPost")
+      .then((response) => {
+        return response.data;
+      })
+      .then((data) => {
+        setArticles(data.posts);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <div className="startups_container">
       <div className="startups_search_box">
@@ -29,17 +46,20 @@ function Startups() {
 
       <div className="startups_post_container">
         <div className="startups_post_grid">
-          <div className="startup_grid_box box1">1</div>
-          <div className="startup_grid_box">2</div>
-          <div className="startup_grid_box">3</div>
-          <div className="startup_grid_box">5</div>
-          <div className="startup_grid_box">6</div>
-          <div className="startup_grid_box">7</div>
-          <div className="startup_grid_box">8</div>
-          <div className="startup_grid_box">8</div>
-          <div className="startup_grid_box">8</div>
-          <div className="startup_grid_box">8</div>
-          <div className="startup_grid_box">8</div>
+          {articles.map((post, key) => (
+            <div key={key} className="startup_grid_box">
+              <div className="box_img">
+                <img src={url} alt="" />
+              </div>
+              <div className="box_content">
+                <div className="date_title">
+                  <li className="post_date">{post.date}</li>
+                  <li>{post.title}</li>
+                </div>
+                <li className="post_content">{post.content}</li>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
