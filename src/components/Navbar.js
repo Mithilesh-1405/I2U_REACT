@@ -98,7 +98,9 @@ function Navbar() {
       </div>
       <div className="sidebar">
         <ul>
-          <li>Startups</li>
+          <li>
+            <NavLink to="/startups">Startup</NavLink>
+          </li>
           <li>Mentors</li>
           <li>Investors</li>
           <li>Accelerators</li>

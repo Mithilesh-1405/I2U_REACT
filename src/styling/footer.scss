@@ -1,7 +1,7 @@
 footer {
   width: 100%;
   background-color: #f2f2f2;
-  position: static;
+  position: fixed;
   bottom: 0;
 }
 .footer_list {
@@ -31,6 +31,6 @@ footer {
 
   .footer_list li {
     margin: 8px;
-    flex: 1 1 40%; /* Allow 2 items per row on very small screens */
+    flex: 1 1 40%;
   }
 }
