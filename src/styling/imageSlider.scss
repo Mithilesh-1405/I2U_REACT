@@ -34,6 +34,7 @@ $desktop: 1300px;
   cursor: pointer;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in;
   svg {
     fill: white;
   }
@@ -49,6 +50,7 @@ $desktop: 1300px;
   cursor: pointer;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in;
   svg {
     fill: white;
   }
@@ -56,7 +58,7 @@ $desktop: 1300px;
 .left_arrow:hover,
 .right_arrow:hover {
   color: white;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(203, 202, 202, 0.2);
 }
 
 .slider_image {
@@ -75,33 +77,56 @@ $desktop: 1300px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.25);
-  color: white;
   border-radius: 8px;
 }
 .slider_content {
   position: relative;
-  top: 35%;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   gap: clamp(20px, 3vh, 20px);
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+  margin: 0 10rem;
+  padding: 20px;
 }
 .title {
-  font-size: clamp(14px, 4vw, 40px);
+  font-size: clamp(14px, 4vw, 36px);
+  font-weight: 400;
 }
 .link {
   user-select: none;
+  background-color: black;
+  padding: 10px;
+  border-radius: 2px;
   a {
-    text-decoration: underline;
-    font-size: clamp(12px, 3vw, 20px);
-    color: blue;
+    text-decoration: none;
+    color: white;
+    font-size: clamp(12px, 3vw, 16px);
+  }
+  &:hover {
+    background-color: white;
+    a {
+      color: black;
+    }
+  }
+}
+@media (max-width: $laptop) {
+  .slider_content {
+    margin: 0 6rem;
   }
 }
 @media (max-width: $tablet) {
   svg {
     width: 30px;
     height: 30px;
+  }
+  .slider_content {
+    margin: 0 4rem;
   }
 }

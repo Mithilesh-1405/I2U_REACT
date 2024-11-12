@@ -1,0 +1,10 @@
+.skeleton {
+  display: flex;
+  
+  div{
+    margin: 10px;
+    &:last-child{
+        width: 100%;
+    }
+  }
+}

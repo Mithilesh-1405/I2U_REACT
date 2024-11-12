@@ -2,21 +2,46 @@ import { React, useEffect, useState } from "react";
 import axios from "axios";
 import url from "../Assets/images/slider_image_2.jpg";
 import "../styling/startups.scss";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import Skeleton_startup from "../Loading_UI/Skeleton_startup";
 
 function Startups() {
   const [articles, setArticles] = useState([]);
-  useEffect(() => {
-    axios
-      .get("https://i2u-react-backend.onrender.com/getPost")
-      .then((response) => {
-        return response.data;
-      })
-      .then((data) => {
-        setArticles(data.posts);
-      })
-      .catch((err) => {
-        console.log(err);
+  const [isLoading, setIsLoading] = useState(true);
+
+  function handleSorting(e) {
+    const sortBy = e.target.value;
+    if (sortBy == "latest") {
+      const sortedArticles = [...articles].sort((a, b) => {
+        return new Date(b.date) - new Date(a.date);
       });
+      setArticles(sortedArticles);
+    } else {
+      const sortedArticles = [...articles].sort((a, b) => {
+        return new Date(a.date) - new Date(b.date);
+      });
+      setArticles(sortedArticles);
+    }
+  }
+
+  async function getPosts() {
+    try {
+      const response = await axios.get(
+        process.env.REACT_APP_BACKEND_URL + "/getPost"
+      );
+      if (response.status === 200) {
+        setIsLoading(false);
+      }
+
+      setArticles(response.data.posts);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  useEffect(() => {
+    getPosts();
   }, []);
   return (
     <div className="startups_container">
@@ -35,8 +60,8 @@ function Startups() {
           <input type="text" placeholder="Search" />
         </div>
         <div className="search_grid_box">
-          <form action="">
-            <select name="sort_menu" id="sort_menu">
+          <form>
+            <select name="sort_menu" id="sort_menu" onChange={handleSorting}>
               <option value="latest">Date (Latest)</option>
               <option value="oldest">Date (Oldest)</option>
             </select>
@@ -44,6 +69,7 @@ function Startups() {
         </div>
       </div>
 
+      {isLoading && <Skeleton_startup cards={6} />}
       <div className="startups_post_container">
         <div className="startups_post_grid">
           {articles.map((post, key) => (

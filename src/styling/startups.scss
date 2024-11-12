@@ -66,21 +66,29 @@ $desktop: 1300px;
   .startups_post_grid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Fixed 4 columns initially */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
     padding: 15px;
 
     .startup_grid_box {
-      background-color: rgba(240, 240, 240, 1);
+      background-color: #e6e6e6;
       display: flex;
       flex-direction: column;
       gap: 15px;
-      min-width: 280px; /* Minimum width for each box */
-      height: 300px; /* Fixed height for consistent box size */
-
+      padding: 10px;
+      min-width: 280px;
+      min-height: 300px;
+      transition: background-color 0.3s ease-in-out;
+      &:hover {
+        background-color: #f0f0f0;
+        cursor: pointer;
+        img {
+          transform: scale(1.11);
+        }
+      }
       .box_img {
         aspect-ratio: 16/9;
-        height: 180px; /* Fixed height for image */
+        height: 180px;
         overflow: hidden;
 
         img {
@@ -88,6 +96,7 @@ $desktop: 1300px;
           height: 100%;
           object-fit: cover;
           display: block;
+          transition: transform 0.3s ease;
         }
       }
 
@@ -159,13 +168,13 @@ $desktop: 1300px;
 /* Media Queries */
 @media screen and (max-width: 1200px) {
   .startups_post_grid {
-    grid-template-columns: repeat(3, 1fr) !important; /* 3 columns */
+    grid-template-columns: repeat(3, 1fr) !important;
   }
 }
 
 @media screen and (max-width: 992px) {
   .startups_post_grid {
-    grid-template-columns: repeat(2, 1fr) !important; /* 2 columns */
+    grid-template-columns: repeat(2, 1fr) !important;
 
     .startup_grid_box {
       &:first-child {
@@ -186,12 +195,12 @@ $desktop: 1300px;
 
 @media screen and (max-width: 768px) {
   .startups_post_grid {
-    grid-template-columns: 1fr !important; /* 1 column */
+    grid-template-columns: 1fr !important;
     gap: 15px;
 
     .startup_grid_box {
-      min-width: 100%; /* Full width on mobile */
-      height: auto; /* Allow height to adjust on mobile */
+      min-width: 100%;
+      height: auto;
 
       .box_img {
         height: 200px;

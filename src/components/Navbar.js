@@ -3,6 +3,14 @@ import { NavLink } from "react-router-dom";
 import "../styling/navbar.scss";
 import logo from "../Assets/icons/i2u_logo.jpg";
 
+const CustomNavLink = ({ to, children }) => {
+  return (
+    <NavLink to={to} className={({ isActive }) => (isActive ? "active" : "")}>
+      {children}
+    </NavLink>
+  );
+};
+
 function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -41,13 +49,13 @@ function Navbar() {
           <div className="navbar_1">
             <ul>
               <li>
-                <NavLink to="/login">Login</NavLink>
+                <CustomNavLink to="/login">Login</CustomNavLink>
               </li>
               <li>
-                <NavLink to="/Signup">Signup</NavLink>
+                <CustomNavLink to="/Signup">Signup</CustomNavLink>
               </li>
               <li>
-                <NavLink to="/Contact">Contact Us</NavLink>
+                <CustomNavLink to="/Contact">Contact Us</CustomNavLink>
               </li>
             </ul>
           </div>
@@ -79,19 +87,29 @@ function Navbar() {
                 )}
               </div>
             )}
-            <NavLink to="/">
+            <CustomNavLink to="/">
               <img src={logo} alt="i2u Logo" />
-            </NavLink>
+            </CustomNavLink>
 
             <ul>
               <li>
-                <NavLink to="/startups">Startup</NavLink>
+                <CustomNavLink to="/startups">Startup</CustomNavLink>
               </li>
-              <li>Mentors</li>
-              <li>Investors</li>
-              <li>Accelerators</li>
-              <li>Influencers</li>
-              <li>About Us</li>
+              <li>
+                <CustomNavLink to="/mentors">Mentors</CustomNavLink>
+              </li>
+              <li>
+                <CustomNavLink to="/investors">Investors</CustomNavLink>
+              </li>
+              <li>
+                <CustomNavLink to="/accelerators">Accelerators</CustomNavLink>
+              </li>
+              <li>
+                <CustomNavLink to="/influencers">Influencers</CustomNavLink>
+              </li>
+              <li>
+                <CustomNavLink to="/about">About Us</CustomNavLink>
+              </li>
             </ul>
           </div>
         </div>
@@ -99,16 +117,23 @@ function Navbar() {
       <div className="sidebar">
         <ul>
           <li>
-            <NavLink to="/startups">Startup</NavLink>
+            <CustomNavLink to="/startups">Startup</CustomNavLink>
           </li>
-          <li>Mentors</li>
-          <li>Investors</li>
-          <li>Accelerators</li>
-          <li>Influencers</li>
-          <li>About Us</li>
-          <li>Login</li>
-          <li>Signup</li>
-          <li>Contact Us</li>
+          <li>
+            <CustomNavLink to="/mentors">Mentors</CustomNavLink>
+          </li>
+          <li>
+            <CustomNavLink to="/investors">Investors</CustomNavLink>
+          </li>
+          <li>
+            <CustomNavLink to="/accelerators">Accelerators</CustomNavLink>
+          </li>
+          <li>
+            <CustomNavLink to="/influencers">Influencers</CustomNavLink>
+          </li>
+          <li>
+            <CustomNavLink to="/about">About Us</CustomNavLink>
+          </li>
         </ul>
       </div>
     </nav>
