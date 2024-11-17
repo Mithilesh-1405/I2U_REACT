@@ -8,3 +8,9 @@
   font-weight: 550;
   font-style: normal;
 }
+
+.main_content {
+  position: relative;
+  top: 6.6rem;
+  height: auto;
+}

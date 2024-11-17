@@ -93,7 +93,7 @@ function Navbar() {
 
             <ul>
               <li>
-                <CustomNavLink to="/startups">Startup</CustomNavLink>
+                <CustomNavLink to="/startups">Startups</CustomNavLink>
               </li>
               <li>
                 <CustomNavLink to="/mentors">Mentors</CustomNavLink>
@@ -102,10 +102,10 @@ function Navbar() {
                 <CustomNavLink to="/investors">Investors</CustomNavLink>
               </li>
               <li>
-                <CustomNavLink to="/accelerators">Accelerators</CustomNavLink>
+                <CustomNavLink to="/enablers">Enablers</CustomNavLink>
               </li>
               <li>
-                <CustomNavLink to="/influencers">Influencers</CustomNavLink>
+                <CustomNavLink to="/i2useries">What we do</CustomNavLink>
               </li>
               <li>
                 <CustomNavLink to="/about">About Us</CustomNavLink>
@@ -126,13 +126,22 @@ function Navbar() {
             <CustomNavLink to="/investors">Investors</CustomNavLink>
           </li>
           <li>
-            <CustomNavLink to="/accelerators">Accelerators</CustomNavLink>
+            <CustomNavLink to="/enablers">Enablers</CustomNavLink>
           </li>
           <li>
-            <CustomNavLink to="/influencers">Influencers</CustomNavLink>
+            <CustomNavLink to="/i2useries">What we do</CustomNavLink>
           </li>
           <li>
             <CustomNavLink to="/about">About Us</CustomNavLink>
+          </li>
+          <li>
+            <CustomNavLink to="/login">Login</CustomNavLink>
+          </li>
+          <li>
+            <CustomNavLink to="/Signup">Signup</CustomNavLink>
+          </li>
+          <li>
+            <CustomNavLink to="/Contact">Contact Us</CustomNavLink>
           </li>
         </ul>
       </div>

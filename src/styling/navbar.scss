@@ -20,13 +20,16 @@ nav {
   }
 }
 .navbar_1 {
-  color: white;
   ul {
     justify-content: flex-end;
     align-items: center;
   }
   a {
-    color: white;
+    color: #cad4e1;
+    transition: color 0.1s ease-in;
+    &:hover {
+      color: white;
+    }
   }
 }
 .navbar_2 {
@@ -35,10 +38,32 @@ nav {
   align-items: center;
   width: 100%;
   height: 10%;
+  background-color: white;
   ul {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    a {
+      color: black;
+      &::after {
+        content: "";
+        height: 4px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -18px;
+        opacity: 0;
+        background-color: #5117a3;
+        transition: all 0.1s ease-in;
+        pointer-events: none;
+      }
+      &:hover::after {
+        opacity: 1;
+      }
+      &.active::after {
+        opacity: 1;
+      }
+    }
   }
   img {
     max-width: 50px;
@@ -46,30 +71,10 @@ nav {
     border-radius: 8px;
     position: relative;
     left: 0.5rem;
+    top: 0.08rem;
   }
   svg {
     display: none;
-  }
-  a {
-    color: black;
-    &::after {
-      content: "";
-      height: 4px;
-      width: 100%;
-      position: absolute;
-      left: 0;
-      bottom: -18px;
-      opacity: 0;
-      background-color: #5117a3;
-      transition: all 0.1s ease-in;
-      pointer-events: none;
-    }
-    &:hover::after {
-      opacity: 1;
-    }
-    &.active::after {
-      opacity: 1;
-    }
   }
 }
 .navbar_1,
@@ -108,6 +113,10 @@ nav {
 .nav_cont {
   display: flex;
   flex-direction: column;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
 }
 .navbar_wrapper {
   background-color: $blue;
@@ -119,7 +128,7 @@ nav {
 
 .sidebar {
   position: fixed;
-  top: 3.7rem;
+  top: 3.9rem;
   left: 0;
   height: 100vh;
   background-color: white;
@@ -134,6 +143,31 @@ nav {
     width: 100%;
     li {
       width: 100%;
+      a {
+        color: #5f5f5f;
+        transition: color 0.1s ease-in;
+        &:hover {
+          color: rgb(0, 0, 0);
+        }
+        &::after {
+          content: "";
+          height: 4px;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          bottom: -18px;
+          opacity: 0;
+          background-color: #5117a3;
+          transition: all 0.1s ease-in;
+          pointer-events: none;
+        }
+        &:hover::after {
+          opacity: 1;
+        }
+        &.active::after {
+          opacity: 1;
+        }
+      }
     }
   }
 }

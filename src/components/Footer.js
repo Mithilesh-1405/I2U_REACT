@@ -13,7 +13,7 @@ function Footer() {
           </a>
         </li>
         <li>
-          &copy;2024 <a href="">i2u.ai</a>
+          &copy;2024 <a href="https://i2u.ai">i2u.ai</a>
         </li>
         <li>
           <a href="https://i2u.ai/PrivacyPolicy/">Privacy Policy</a>
