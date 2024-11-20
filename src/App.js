@@ -7,7 +7,7 @@ import Startups from "./pages/Startups";
 import Mentors from "./pages/Mentors";
 import Enablers from "./pages/Enablers";
 import Series from "./pages/Series";
-import AdminAuth from "./components/AdminAuth";
+import AdminAuth from "components/AdminAuth";
 
 function App() {
   return (
