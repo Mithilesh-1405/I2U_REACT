@@ -7,6 +7,7 @@ import Startups from "./pages/Startups";
 import Mentors from "./pages/Mentors";
 import Enablers from "./pages/Enablers";
 import Series from "./pages/Series";
+import AdminAuth from "./components/AdminAuth";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/mentors" element={<Mentors />} />
             <Route path="/enablers" element={<Enablers />} />
             <Route path="/i2useries" element={<Series />} />
+            <Route path="/adminPublish" element={<AdminAuth />} />
           </Routes>
         </main>
       </div>
