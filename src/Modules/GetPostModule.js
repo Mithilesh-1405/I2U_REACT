@@ -7,7 +7,6 @@ export async function getPosts({
   setErrors,
 }) {
   try {
-    console.log(endpoint);
     const response = await axios.get(
       process.env.REACT_APP_BACKEND_URL + "/getPost",
       { params: { page: endpoint } }
