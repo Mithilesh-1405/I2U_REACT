@@ -105,7 +105,7 @@ function Navbar() {
                 <CustomNavLink to="/enablers">Enablers</CustomNavLink>
               </li>
               <li>
-                <CustomNavLink to="/i2useries">What we do</CustomNavLink>
+                <CustomNavLink to="/i2useries">What We Do</CustomNavLink>
               </li>
               <li>
                 <CustomNavLink to="/about">About Us</CustomNavLink>
@@ -129,7 +129,7 @@ function Navbar() {
             <CustomNavLink to="/enablers">Enablers</CustomNavLink>
           </li>
           <li>
-            <CustomNavLink to="/i2useries">What we do</CustomNavLink>
+            <CustomNavLink to="/i2useries">What We Do</CustomNavLink>
           </li>
           <li>
             <CustomNavLink to="/about">About Us</CustomNavLink>

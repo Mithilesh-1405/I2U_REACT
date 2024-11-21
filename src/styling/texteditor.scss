@@ -55,6 +55,7 @@ select{
 	padding: 0.5rem;
 	width: 200px;
 }
+
 .post_details{
 	input{
 		border: none;
@@ -78,4 +79,32 @@ select{
 		background-color: #3b50f8;
 	}
 	}
+}
+
+.text_editor_container {
+  .input_container {
+    .image_upload {
+      margin: 1rem 0;
+      padding: 1rem;
+      border: 2px dashed #ccc;
+      border-radius: 4px;
+      
+      .image_input {
+        width: 100%;
+        padding: 0.5rem;
+      }
+      
+      .image_preview {
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        background: #f5f5f5;
+        border-radius: 4px;
+        
+        p {
+          margin: 0;
+          color: #666;
+        }
+      }
+    }
+  }
 }
