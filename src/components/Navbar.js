@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 import "../styling/navbar.scss";
 import logo from "../Assets/icons/i2u_logo.jpg";
 
-const CustomNavLink = ({ to, children }) => {
+const CustomNavLink = ({ to, children, onClick }) => {
   return (
-    <NavLink to={to} className={({ isActive }) => (isActive ? "active" : "")}>
+    <NavLink to={to} className={({ isActive }) => (isActive ? "active" : "")} onClick={onClick}>
       {children}
     </NavLink>
   );
@@ -42,6 +42,13 @@ function Navbar() {
       sidebar.style.display = "flex";
     }
   }
+
+  const handleSidebarLinkClick = () => {
+    setIsNavOpen(false);
+    const sidebar = document.querySelector(".sidebar");
+    sidebar.style.display = "none";
+  };
+
   return (
     <nav>
       <div className="nav_cont">
@@ -98,18 +105,18 @@ function Navbar() {
               <li>
                 <CustomNavLink to="/mentors">Mentors</CustomNavLink>
               </li>
-              <li>
+              {/* <li>
                 <CustomNavLink to="/investors">Investors</CustomNavLink>
-              </li>
+              </li> */}
               <li>
                 <CustomNavLink to="/enablers">Enablers</CustomNavLink>
               </li>
               <li>
                 <CustomNavLink to="/i2useries">What We Do</CustomNavLink>
               </li>
-              <li>
+              {/* <li>
                 <CustomNavLink to="/about">About Us</CustomNavLink>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -117,31 +124,31 @@ function Navbar() {
       <div className="sidebar">
         <ul>
           <li>
-            <CustomNavLink to="/startups">Startup</CustomNavLink>
+            <CustomNavLink to="/startups" onClick={handleSidebarLinkClick}>Startup</CustomNavLink>
           </li>
           <li>
-            <CustomNavLink to="/mentors">Mentors</CustomNavLink>
+            <CustomNavLink to="/mentors" onClick={handleSidebarLinkClick}>Mentors</CustomNavLink>
           </li>
-          <li>
+          {/* <li>
             <CustomNavLink to="/investors">Investors</CustomNavLink>
+          </li> */}
+          <li>
+            <CustomNavLink to="/enablers" onClick={handleSidebarLinkClick}>Enablers</CustomNavLink>
           </li>
           <li>
-            <CustomNavLink to="/enablers">Enablers</CustomNavLink>
+            <CustomNavLink to="/i2useries" onClick={handleSidebarLinkClick}>What We Do</CustomNavLink>
           </li>
-          <li>
-            <CustomNavLink to="/i2useries">What We Do</CustomNavLink>
-          </li>
-          <li>
+          {/* <li>
             <CustomNavLink to="/about">About Us</CustomNavLink>
+          </li> */}
+          <li>
+            <CustomNavLink to="/login" onClick={handleSidebarLinkClick}>Login</CustomNavLink>
           </li>
           <li>
-            <CustomNavLink to="/login">Login</CustomNavLink>
+            <CustomNavLink to="/Signup" onClick={handleSidebarLinkClick}>Signup</CustomNavLink>
           </li>
           <li>
-            <CustomNavLink to="/Signup">Signup</CustomNavLink>
-          </li>
-          <li>
-            <CustomNavLink to="/Contact">Contact Us</CustomNavLink>
+            <CustomNavLink to="/Contact" onClick={handleSidebarLinkClick}>Contact Us</CustomNavLink>
           </li>
         </ul>
       </div>
