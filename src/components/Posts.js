@@ -18,6 +18,14 @@ function Posts({ posts }) {
       text: textContent
     };
   };
+
+  const getImageUrl = (url) => {
+    if (!url) return defaultImage;
+    // Extract filename from the full path
+    const filename = url.split('/').pop();
+    return `${process.env.REACT_APP_BACKEND_URL}/uploads/${filename}`;
+  };
+
   const navigate = useNavigate();
   const handlePostClick = (post) => {  
     navigate(`/post/${post.post_id}`, { state: { post } });
@@ -32,7 +40,7 @@ function Posts({ posts }) {
             <div key={key} className="startup_grid_box markup_content" onClick={() => handlePostClick(post)} >
               <div className="box_img">
                 <img 
-                  src={post.url ? `${process.env.REACT_APP_BACKEND_URL}${post.url}` : defaultImage}
+                  src={getImageUrl(post.url)}
                   alt={post.title || "Post image"} 
                   onError={(e) => {
                     console.log('Image failed to load:', post.url);
@@ -57,7 +65,7 @@ function Posts({ posts }) {
             <div key={key} className="startup_grid_box" onClick={() => handlePostClick(post)}> 
               <div className="box_img">
                 <img 
-                  src={post.url ? `${process.env.REACT_APP_BACKEND_URL}${post.url}` : defaultImage}
+                  src={getImageUrl(post.url)}
                   alt={post.title || "Post image"}
                   onError={(e) => {
                     console.log('Image failed to load:', post.url);
