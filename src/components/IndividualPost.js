@@ -3,6 +3,7 @@ import DOMPurify from "dompurify";
 import defaultImage from "../Assets/images/slider_image_2.jpg";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../styling/individualPost.scss";
+
 const IndividualPost = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -28,23 +29,17 @@ const IndividualPost = () => {
         <h1 className="post_title">{post.title}</h1>
       </div>
 
-      {post.url && (
-        <div className="post_image">
-          <img
-            src={
-              post.url
-                ? `${process.env.REACT_APP_BACKEND_URL}${post.url}`
-                : defaultImage
-            }
-            alt={post.title}
-            onError={(e) => {
-              console.log("Image failed to load:", post.url);
-              e.target.onerror = null;
-              e.target.src = defaultImage;
-            }}
-          />
-        </div>
-      )}
+      <div className="post_image">
+        <img
+          src={post.url ? `${process.env.REACT_APP_BACKEND_URL}${post.url}` : defaultImage}
+          alt={post.title}
+          onError={(e) => {
+            console.log("Image failed to load:", e.target.src);
+            e.target.onerror = null;
+            e.target.src = defaultImage;
+          }}
+        />
+      </div>
 
       <div className="post_content">
         {post.content_type === "markup" ? (
