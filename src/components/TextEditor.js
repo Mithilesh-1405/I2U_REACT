@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import JoditEditor from "jodit-react";
 import "../styling/texteditor.scss";
+import MoonLoader from "react-spinners/ClipLoader";
 
 function TextEditor() {
   const editor = useRef(null);
@@ -10,6 +11,7 @@ function TextEditor() {
     title: "",
     category: "startup",
   });
+  const [isUploading, setIsUploading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,8 +39,6 @@ function TextEditor() {
 
     try {
       let imageUrl = "";
-
-      // Upload image if selected
       if (selectedImage) {
         const imageFormData = new FormData();
         imageFormData.append("image", selectedImage);
@@ -58,7 +58,7 @@ function TextEditor() {
         const imageData = await imageResponse.json();
         imageUrl = imageData.imageUrl;
       }
-
+      setIsUploading(true);
       const response = await fetch(
         process.env.REACT_APP_BACKEND_URL + "/publishPost",
         {
@@ -74,7 +74,7 @@ function TextEditor() {
 
       const data = await response.json();
       if (response.status === 200) {
-        console.log("Post published successfully");
+        setIsUploading(false)
         setContent("");
         setSelectedImage(null);
         setFormData({
@@ -90,46 +90,49 @@ function TextEditor() {
   }
 
   return (
-    <div className="editor">
-      <form className="post_details" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="title"
-          placeholder="Title"
-          value={formData.title}
-          onChange={handleChange}
-        />
-        <select
-          name="category"
-          value={formData.category}
-          onChange={handleChange}
-        >
-          <option value="startup">Startups</option>
-          <option value="mentor">Mentors</option>
-          <option value="whatwedo">What we do</option>
-          <option value="enabler">Enablers</option>
-        </select>
-        <div className="image_upload">
-          <input
-            type="file"
-            accept="image/*"
-            onChange={handleImageChange}
-            className="image_input"
+    <>
+     <div className="editor">
+      {isUploading ? (
+        <div className="uploading">
+          <MoonLoader color="#36d7b7" />
+          <p>Uploading, please wait...</p>
+          </div>
+      ) : (
+          <div>
+            <form className="post_details" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="title"
+              placeholder="Title"
+              value={formData.title}
+              onChange={handleChange}
+              required
+            />
+            <select
+              name="category"
+              value={formData.category}
+              onChange={handleChange}
+            >
+              <option value="startup">Startup</option>
+              <option value="technology">Technology</option>
+              <option value="business">Business</option>
+            </select>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => setSelectedImage(e.target.files[0])}
+            />
+            <button type="submit">Publish</button>
+          </form>
+          <JoditEditor
+            ref={editor}
+            value={content}
+            onChange={(newContent) => setContent(newContent)}
           />
-          {selectedImage && (
-            <div className="image_preview">
-              <p>Selected: {selectedImage.name}</p>
-            </div>
-          )}
-        </div>
-        <button type="submit">Publish</button>
-      </form>
-      <JoditEditor
-        ref={editor}
-        value={content}
-        onChange={(newContent) => setContent(newContent)}
-      />
-    </div>
+          </div>
+      )}
+      </div>
+    </>
   );
 }
 

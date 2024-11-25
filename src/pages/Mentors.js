@@ -1,5 +1,5 @@
 import { React, useEffect, useState } from "react";
-import "../styling/startups.scss";
+import "../styling/pageStyling.scss";
 import "react-loading-skeleton/dist/skeleton.css";
 import SkeletonCard from "../Loading_UI/SkeletonCard";
 import Posts from "../components/Posts";
@@ -35,7 +35,7 @@ function Mentors() {
       ) : !errors ? (
         <Posts posts={Articles} />
       ) : (
-        <div className="errors"> {errors}</div>
+        <div className="errors">{errors}</div>
       )}
     </div>
   );

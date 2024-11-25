@@ -3,7 +3,7 @@ import ImageSlider from "../components/ImageSlider";
 import image1 from "../Assets/images/slider_image_1.jpeg";
 import image2 from "../Assets/images/slider_image_2.jpg";
 import image3 from "../Assets/images/slider_image_3.jpg";
-import "../styling/homepage.scss";
+import "../styling/pageStyling.scss";
 
 function Homepage() {
   const images = [
@@ -23,6 +23,7 @@ function Homepage() {
       link: "https://adventuresinbmterrain.blogspot.com/2024/11/the-agile-methodology-adapting-to-rapid.html",
     },
   ];
+
   return (
     <div className="home_container">
       <ImageSlider slides={images} />

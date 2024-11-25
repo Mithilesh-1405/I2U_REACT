@@ -1,4 +1,4 @@
-import "../styling/startups.scss";
+import "../styling/pageStyling.scss";
 import "react-loading-skeleton/dist/skeleton.css";
 import { React, useEffect, useState } from "react";
 import SkeletonCard from "../Loading_UI/SkeletonCard";

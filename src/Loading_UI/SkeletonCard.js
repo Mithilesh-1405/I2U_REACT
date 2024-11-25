@@ -1,7 +1,8 @@
 import React from "react";
 import Skeleton from "react-loading-skeleton";
-import "../styling/startups.scss";
-function Skeleton_startup({ cards }) {
+import "../styling/pageStyling.scss";
+
+function SkeletonStartup({ cards }) {
   return (
     <div className="startups_post_container">
       <div className="startups_post_grid">
@@ -24,4 +25,4 @@ function Skeleton_startup({ cards }) {
   );
 }
 
-export default Skeleton_startup;
+export default SkeletonStartup;

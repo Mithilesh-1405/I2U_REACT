@@ -20,6 +20,7 @@ $desktop: 1300px;
     align-items: center;
     padding: 10px;
     grid-gap: 10px;
+
     input {
       border: 2px double rgba(52, 45, 252, 0);
       background-color: rgba(240, 240, 240, 0.7);
@@ -32,20 +33,26 @@ $desktop: 1300px;
       transition: border 0.2s ease-in-out;
       &:focus-within {
         outline: none;
-        border: 2px double rgba(52, 45, 252, 0.5);
+        border: 2px double rgba(81, 23, 163,0.8);
       }
     }
     p {
       font-size: clamp(14px, 2vw, 18px);
     }
     select {
+      border: 2px double rgba(81, 23, 163,0.4);
+      background-color: white;
       border-radius: 8px;
-      border: none;
-      background-color: rgba(240, 240, 240, 1);
       padding: 10px;
-      option {
-        padding: 10px;
-        margin-top: 10px;
+      &:focus-visible{
+        border: 2px double rgba(81, 23, 163,0.8);
+      }
+      option{
+        &:hover,
+        &:focus {
+          background-color: rgba(52, 45, 252, 0.1);
+          color: rgba(81,23,163,1);
+        }
       }
       &:focus-within {
         outline: none;
@@ -78,16 +85,19 @@ $desktop: 1300px;
       padding: 10px;
       min-width: 280px;
       height: 380px;
-      transition: background-color 0.3s ease-in-out;
-      
+      position: relative;
+      bottom: 0;
+      transition: background-color 0.3s ease-in-out, bottom 0.1s ease-in-out, border 0.1s ease-in-out;
+      border: 2px double rgba(255,255,252,0) ;
+
       &:hover {
         background-color: #f0f0f0;
+        position: relative;
+        bottom: 10px;
         cursor: pointer;
-        img {
-          transform: scale(1.11);
-        }
+        border: 2px double rgba(81, 23, 163,0.8);
       }
-      
+
       .box_img {
         aspect-ratio: 16/9;
         height: 180px;
@@ -148,7 +158,6 @@ $desktop: 1300px;
         }
       }
 
-      // Special styling for the first (featured) post
       &:first-child {
         grid-column: 1 / -1;
         flex-direction: row;
@@ -171,7 +180,9 @@ $desktop: 1300px;
 
           .date_title {
             margin-bottom: 20px;
-            
+            .post_date{
+              font-size: 22px;
+            }
             li:last-child {
               font-size: 24px;
               white-space: normal;
@@ -201,6 +212,26 @@ $desktop: 1300px;
   color: red;
   font-size: 16px;
 }
+
+@media screen and (max-width: $tablet) {
+  .startups_search_box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .startups_search_box {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .startups_post_grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .startups_post_grid {
     grid-template-columns: repeat(3, 1fr) !important;

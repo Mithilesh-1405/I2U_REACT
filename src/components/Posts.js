@@ -1,14 +1,14 @@
 import React from "react";
 import DOMPurify from 'dompurify';
 import defaultImage from "../Assets/images/slider_image_2.jpg";
-import "../styling/startups.scss";
+import "../styling/pageStyling.scss";
 import { useNavigate } from 'react-router-dom';
 
 function Posts({ posts }) {
   const sanitizeContent = (content) => {
     const sanitizedHtml = DOMPurify.sanitize(content);
 
-    // Create a temporary div to parse the HTML and get text content
+
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = sanitizedHtml;
     const textContent = tempDiv.textContent || tempDiv.innerText;
