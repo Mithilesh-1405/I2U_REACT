@@ -49,6 +49,11 @@ function Navbar() {
     sidebar.style.display = "none";
   };
 
+  const handleEmailClick = (e) => {
+    e.preventDefault();
+    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=admin@i2u.ai', '_blank');
+  };
+
   return (
     <nav>
       <div className="nav_cont">
@@ -56,13 +61,13 @@ function Navbar() {
           <div className="navbar_1">
             <ul>
               <li>
-                <CustomNavLink to="/login">Login</CustomNavLink>
+                <a href="https://i2u.ai/login.html">Login</a>
               </li>
               <li>
-                <CustomNavLink to="/Signup">Signup</CustomNavLink>
+                <a href="https://i2u.ai/userRegistration.html">Signup</a>
               </li>
               <li>
-                <CustomNavLink to="/Contact">Contact Us</CustomNavLink>
+                <a href="mailto:admin@i2u.ai" onClick={handleEmailClick}>Contact Us</a>
               </li>
             </ul>
           </div>
@@ -111,9 +116,9 @@ function Navbar() {
               <li>
                 <CustomNavLink to="/enablers">Enablers</CustomNavLink>
               </li>
-              <li>
+              {/* <li>
                 <CustomNavLink to="/i2useries">What We Do</CustomNavLink>
-              </li>
+              </li> */}
               {/* <li>
                 <CustomNavLink to="/about">About Us</CustomNavLink>
               </li> */}
@@ -135,20 +140,20 @@ function Navbar() {
           <li>
             <CustomNavLink to="/enablers" onClick={handleSidebarLinkClick}>Enablers</CustomNavLink>
           </li>
-          <li>
+          {/* <li>
             <CustomNavLink to="/i2useries" onClick={handleSidebarLinkClick}>What We Do</CustomNavLink>
-          </li>
+          </li> */}
           {/* <li>
             <CustomNavLink to="/about">About Us</CustomNavLink>
           </li> */}
           <li>
-            <CustomNavLink to="/login" onClick={handleSidebarLinkClick}>Login</CustomNavLink>
+            <a href="https://i2u.ai/login.html">Login</a>
           </li>
           <li>
-            <CustomNavLink to="/Signup" onClick={handleSidebarLinkClick}>Signup</CustomNavLink>
+            <a href="https://i2u.ai/userRegistration.html">Signup</a>
           </li>
           <li>
-            <CustomNavLink to="/Contact" onClick={handleSidebarLinkClick}>Contact Us</CustomNavLink>
+            <a href="mailto:admin@i2u.ai" onClick={handleEmailClick}>Contact Us</a>
           </li>
         </ul>
       </div>

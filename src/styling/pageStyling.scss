@@ -5,6 +5,20 @@ $tablet: 800px;
 $laptop: 1024px;
 $desktop: 1300px;
 
+.startups_container, .home_container {
+  min-height: calc(100vh - 6.6rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  footer {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    margin-top: auto;
+  }
+}
+
 .startups_container {
   max-width: 1300px;
   margin: 0 auto;
@@ -78,7 +92,7 @@ $desktop: 1300px;
     padding: 15px;
 
     .startup_grid_box {
-      background-color: #e6e6e6;
+      background-color: #f1f1f1;
       display: flex;
       flex-direction: column;
       gap: 15px;
@@ -114,12 +128,15 @@ $desktop: 1300px;
       }
 
       .box_content {
+        background-color: white;
+        border-radius: 3px;
         list-style: none;
         padding: 5px 15px;
         flex: 1;
         display: flex;
         flex-direction: column;
         overflow: hidden;
+
 
         .date_title {
           display: flex;
@@ -146,15 +163,22 @@ $desktop: 1300px;
         }
 
         .post_content {
-          flex: 1;
+          border-radius: 5px;
+          flex: 1 1 100%;
           overflow: hidden;
           display: -webkit-box;
-          -webkit-line-clamp: 3;
+          -webkit-line-clamp: 8;
           -webkit-box-orient: vertical;
-          font-size: 16px;
+          font-size: 15px;
           line-height: 1.5;
           margin: 0;
-          padding: 0;
+          padding: 15px;
+          width: 100%;
+          min-width: 100%;
+          box-sizing: border-box;
+          word-break: break-word;
+          max-height: 200px;
+          text-overflow: ellipsis;
         }
       }
 

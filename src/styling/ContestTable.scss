@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.contest-table-container {
+  padding: 2rem;
+  width: 100%;
+
+  h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+    margin-top: 1rem;
+    -webkit-overflow-scrolling: touch;
+
+    .contest-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #ffffff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      min-width: 600px;
+
+      thead {
+        background-color: #f8f9fa;
+        
+        th {
+          padding: 1rem;
+          text-align: left;
+          font-weight: 600;
+          color: #343a40;
+          border-bottom: 2px solid #dee2e6;
+          white-space: nowrap;
+        }
+      }
+
+      tbody {
+        tr {
+          border-bottom: 1px solid #dee2e6;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #f8f9fa;
+          }
+
+          td {
+            padding: 1rem;
+            color: #495057;
+            vertical-align: middle;
+
+            a {
+              color: #007bff;
+              text-decoration: none;
+              word-break: break-all;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+
+            .contest-image {
+              width: 80px;
+              height: 60px;
+              object-fit: cover;
+              border-radius: 4px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contest-table-container {
+    padding: 1rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .table-responsive {
+      margin-top: 0.5rem;
+
+      .contest-table {
+        td {
+          img.contest-image {
+            width: 60px;
+            height: 45px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contest-table-container {
+    .table-responsive {
+      .contest-table {
+        td {
+          img.contest-image {
+            width: 50px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -8,7 +8,6 @@ function Posts({ posts }) {
   const sanitizeContent = (content) => {
     const sanitizedHtml = DOMPurify.sanitize(content);
 
-
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = sanitizedHtml;
     const textContent = tempDiv.textContent || tempDiv.innerText;
@@ -57,8 +56,9 @@ function Posts({ posts }) {
                 <div
                   className="post_content"
                   title={sanitizedContent.text}
-                  dangerouslySetInnerHTML={sanitizedContent}
-                />
+                >
+                  {sanitizedContent.text}
+                </div>
               </div>
             </div>
           ) : (

@@ -1,5 +1,5 @@
 import React from "react";
-import DOMPurify from "dompurify";
+import parse from 'html-react-parser';
 import defaultImage from "../Assets/images/slider_image_2.jpg";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../styling/individualPost.scss";
@@ -14,10 +14,27 @@ const IndividualPost = () => {
     return null;
   }
 
-  const sanitizeContent = (content) => {
-    return {
-      __html: DOMPurify.sanitize(content),
+  const renderContent = (content) => {
+    const options = {
+      replace: (domNode) => {
+        if (domNode.type === 'tag') {
+          // Remove inline styles and apply CSS classes
+          if (domNode.attribs && domNode.attribs.style) {
+            delete domNode.attribs.style;
+          }
+
+          // Apply specific classes for styling
+          if (domNode.name === 'p') {
+            domNode.attribs.className = 'styled-paragraph';
+          }
+          if (domNode.name === 'b' || domNode.name === 'strong') {
+            domNode.attribs.className = 'styled-bold';
+          }
+        }
+      }
     };
+
+    return parse(content, options);
   };
 
   return (
@@ -43,10 +60,9 @@ const IndividualPost = () => {
 
       <div className="post_content">
         {post.content_type === "markup" ? (
-          <div
-            className="markup_content"
-            dangerouslySetInnerHTML={sanitizeContent(post.content)}
-          />
+          <div className="markup_content">
+            {renderContent(post.content)}
+          </div>
         ) : (
           <div className="plain_text_content">{post.content}</div>
         )}

@@ -3,6 +3,7 @@ import "../styling/pageStyling.scss";
 import "react-loading-skeleton/dist/skeleton.css";
 import SkeletonCard from "../Loading_UI/SkeletonCard";
 import Posts from "../components/Posts";
+import Footer from "../components/Footer";
 import { getPosts, handleSorting } from "../Modules/GetPostModule";
 
 function Series() {
@@ -16,7 +17,7 @@ function Series() {
   }, []);
   return (
     <div className="startups_container">
-      <div className="startups_search_box">
+      {/* <div className="startups_search_box">
         <div className="search_grid_box">
           <form>
             <select
@@ -29,7 +30,7 @@ function Series() {
             </select>
           </form>
         </div>
-      </div>
+      </div> */}
       {isLoading ? (
         <SkeletonCard cards={6} />
       ) : !errors ? (
@@ -37,6 +38,7 @@ function Series() {
       ) : (
         <div className="errors">{errors}</div>
       )}
+      <Footer/>
     </div>
   );
 }
