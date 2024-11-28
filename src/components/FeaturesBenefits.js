@@ -76,6 +76,7 @@ const FeaturesBenefits = ({price}) => {
         <h2>Our Inaugural Invitation Price of ₹20,000 for Startups' Basic Annual Subscription</h2>
         <h3>is Going to be Raised to {price}!</h3>
         <p>Hurry! Our Inaugural Invitation Price Offer Closes on 30th November 2023 at 11:59 AM IST.</p>
+        <h2 >Click Here to Subscribe!!</h2>
         <Countdown targetDate={targetDate} />
       </div>
     </div>

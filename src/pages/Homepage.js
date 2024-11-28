@@ -8,6 +8,10 @@ import data from "../Assets/data/data.json";
 import "../styling/pageStyling.scss";
 import Footer from "../components/Footer";
 
+import hp1 from '../Assets/images/post_images/hp1.jpg';
+import hp2 from '../Assets/images/post_images/hp2.jpg';
+import hp3 from '../Assets/images/post_images/hp3.jpg';
+
 import st1 from '../Assets/images/post_images/st1.jpeg';
 import st2 from '../Assets/images/post_images/st2.jpeg';
 import st3 from '../Assets/images/post_images/st3.jpeg';
@@ -30,6 +34,7 @@ import HomepagePosts from "../components/HomepagePosts";
 
 function Homepage() {
   const images = [
+    hp3,hp1,hp2,
     st3, st2, st4, st5, st1,
     m1, m2, m3, m4, m5,
     e1, e2, e3, e4, e5

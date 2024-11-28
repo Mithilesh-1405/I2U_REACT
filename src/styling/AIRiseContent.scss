@@ -6,6 +6,7 @@ $subtitle-color: #283593;
 $text-color: #333;
 $border-radius: 8px;
 $box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$accent-color: #1a237e;
 
 // Mixins
 @mixin section-card {
@@ -100,13 +101,17 @@ $box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .cta-section {
-    background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
-    color: white;
+    background-color: $accent-color;
     padding: 40px;
+    color: white;
     border-radius: $border-radius;
     text-align: center;
     margin-top: 30px;
-
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(60, 76, 185) !important;
+    }
     h2 {
       font-size: 2rem;
       margin-bottom: 20px;
