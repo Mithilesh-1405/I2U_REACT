@@ -1,4 +1,116 @@
 {
+  "homepage": [
+    {
+      "title": "The Venture Capital Revolution: Fueling Innovation",
+      "content": "The rise of Silicon Valley and the success of early tech giants like Hewlett-Packard, Intel, and Apple created a fertile ground for a new breed of investor: the venture capitalist. These bold individuals were willing to take risks and invest in early-stage companies with high-growth potential. The result was a venture capital revolution that has transformed the global economy.",
+      "date": "Oct 30",
+      "content_type": "startup",
+      "link": "https://i2u.ai/drpl/node/70"
+    },
+    {
+      "title": "The Open Source Movement: Democratizing Technology",
+      "content": "The evolution of technology and entrepreneurship has been marked by significant milestones that have progressively democratized access to information, tools, and opportunities. Among these milestones, the Open Source Movement stands out as a revolutionary force that not only challenged the status quo of proprietary software but also laid the groundwork for the modern startup ecosystem. By understanding the key elements of the Open Source Movement, entrepreneurs can make their startups more robust and adaptable to changing environments, embodying the concept of antifragility.",
+      "date": "Oct 30",
+      "content_type": "startup",
+      "link": "https://i2u.ai/drpl/node/71"
+    },
+    {
+      "title": "The Cloud Computing Era: A New Business Model",
+      "content": "The dawn of cloud computing has revolutionized the technological landscape, offering unprecedented opportunities for innovation and entrepreneurship. This transformation, significantly shaped by pioneers like Amazon Web Services (AWS), has made cutting-edge technology infrastructure accessible to a broader audience, enabling even the most under-resourced visionaries to launch and scale business ventures. In exploring the cloud computing era's development, we also uncover vital strategies for building an antifragile startup ecosystem, poised to withstand and grow from adversity.",
+      "date": "Oct 30",
+      "content_type": "startup",
+      "link": "https://i2u.ai/drpl/node/74"
+    },
+    {
+      "title": "The Garage Inventor: The Birth of the Startup",
+      "content": "The image of a cluttered garage, filled with tools, parts, and the intoxicating scent of solder, has become synonymous with the American entrepreneurial spirit. It's a place where dreams are born, where innovation takes root, and where the seeds of tech giants are sown. This is the story of the garage inventor, the unsung heroes who, from humble beginnings, have shaped the world we live in today.",
+      "date": "Oct 28",
+      "content_type": "startup",
+      "link": "https://i2u.ai/drpl/node/56"
+    },
+    {
+      "title": "The Silicon Valley Pioneers: The First Tech Giants",
+      "content": "Silicon Valley, once a sleepy agricultural region, transformed into a global tech hub thanks to the vision and determination of a handful of pioneering startups. These early tech giants, operating from humble beginnings, laid the foundation for the thriving startup ecosystem we see today.",
+      "date": "Oct 28",
+      "content_type": "startup",
+      "img_url": "../Assets/images/post_images/st5.jpeg",
+      "link": "https://i2u.ai/drpl/node/59"
+    },
+    {
+      "title": "The Mentor Myth: Was Socrates the First Tech Guru?",
+      "content": "The startup ecosystem, a vibrant hub of innovation and entrepreneurial spirit, is often romanticized as a realm of self-made success stories. However, beneath the veneer of individual brilliance lies a crucial element that has often been overlooked: mentorship. While the concept of mentorship might seem relatively modern, its roots can be traced back to ancient Greece and the philosophy of Socrates.",
+      "date": "Nov 26",
+      "content_type": "mentor",
+      "link": "https://i2u.ai/drpl/node/44"
+    },
+    {
+      "title": "From the Ivory Tower to the Boardroom: The Rise of Academic Advisors",
+      "content": "In the early days of the tech startup ecosystem, when venture capital was still a nascent concept, academic advisors emerged as a crucial source of guidance and support. These luminaries, often professors or researchers from prestigious universities, brought their wealth of knowledge, industry connections, and intellectual rigor to the table, helping startups navigate the uncharted waters of innovation.",
+      "date": "Nov 26",
+      "content_type": "mentor",
+      "img_url": "../Assets/images/post_images/m2.jpeg",
+      "link": "https://i2u.ai/drpl/node/50"
+    },
+    {
+      "title": "The Consultant's Corner: Pioneering the Professional Mentor",
+      "content": "As the startup ecosystem matured, the role of advisors evolved into a more formalized and professional one. Many of these early advisors, having successfully built companies, expanded operations, and scaled up globally, became sought-after mentors by boards of directors. Their blend of business acumen, coupled with a practical approach, complemented the often idealistic or overly technical mindset of startup entrepreneurs.",
+      "date": "Nov 26",
+      "content_type": "mentor",
+      "img_url": "../Assets/images/post_images/m3.jpeg",
+      "link": "https://i2u.ai/drpl/node/54"
+    },
+    {
+      "title": "The Celebrity Mentor: Is Fame Enough?",
+      "content": "In the modern era, where celebrity culture permeates every aspect of society, the role of celebrity mentors is both celebrated and scrutinized. The intertwining of mentorship with celebrity status raises several intriguing questions: Is fame a sufficient qualification for someone seeking guidance? What value, if any, does a celebrity bring to the mentorship process that distinguishes them from traditional mentors? This article delves into the phenomenon of 'celebrity mentoring' and examines whether fame alone is sufficient to guide someone on a path to success.",
+      "date": "Nov 26",
+      "content_type": "mentor",
+      "img_url": "../Assets/images/post_images/m4.jpeg",
+      "link": "https://i2u.ai/drpl/node/89"
+    },
+    {
+      "title": "The Entrepreneur Mentor: Learning from the Trenches",
+      "content": "In the dynamic and ever-evolving world of startups, mentorship plays a crucial role in bridging the gap between nascent ideas and successful business ventures. Among the most effective mentors are those who have walked the entrepreneurial path themselves. Startup entrepreneurs turned mentors offer invaluable insights, lessons learned from the trenches, and guidance that only comes from firsthand experience. This article explores the unique contributions of entrepreneur mentors in the startup ecosystem and how their mentorship is shaping the future of innovation and entrepreneurship.",
+      "date": "Nov 26",
+      "content_type": "mentor",
+      "img_url": "../Assets/images/post_images/m5.jpeg",
+      "link": "https://i2u.ai/drpl/node/109"
+    },
+    {
+      "title": "Incubators: The Cradle of Innovation",
+      "content": "Incubators, as we know them today, emerged as a response to the growing need for support and resources for early-stage startups. While the concept of providing a nurturing environment for new ventures can be traced back to earlier eras, the modern incubator model began to take shape in the mid-20th century.",
+      "date": "Oct 26",
+      "content_type": "enabler",
+      "link": "https://i2u.ai/drpl/node/26"
+    },
+    {
+      "title": "Accelerators: A Turbocharged Approach, Beyond Geography",
+      "content": "While incubators provided a nurturing environment for early-stage startups, accelerators emerged as a more intensive and structured approach to support and accelerate growth. The concept of accelerators gained traction in the late 20th century, inspired by the success of programs like Y Combinator and Techstars.",
+      "date": "Oct 26",
+      "content_type": "enabler",
+      "link": "https://i2u.ai/drpl/node/27"
+    },
+    {
+      "title": "Angels: The Seed of Investment, Global Connections",
+      "content": "While venture capital firms often take the spotlight, angel investors play a crucial role in providing early-stage funding to startups. The term 'angel investor' derives from the biblical concept of angels descending from heaven to provide aid.",
+      "date": "Oct 26",
+      "content_type": "enabler",
+      "link": "https://i2u.ai/drpl/node/29"
+    },
+    {
+      "title": "Crowdfunding: The Power of the People, A Worldwide Phenomenon",
+      "content": "Crowdfunding, the practice of raising funds from a large number of people, has gained significant traction in recent years. While the concept of collective funding has been around for centuries, the modern form of crowdfunding emerged in the early 21st century, fueled by the growth of the internet.",
+      "date": "Oct 26",
+      "content_type": "enabler",
+      "link": "https://i2u.ai/drpl/node/32"
+    },
+    {
+      "title": "Venture Capital: The Fuel for Growth, Crossing Borders",
+      "content": "Venture capital (VC) emerged as a distinct form of investment in the mid-20th century, providing high-risk, high-reward financing to early-stage companies. Its roots can be traced back to the post-World War II era, when there was a growing need for capital to support innovation and technological advancements.",
+      "date": "Oct 26",
+      "content_type": "enabler",
+      "link": "https://i2u.ai/drpl/node/28"
+    }
+  ],
   "startups": [
     {
       "title": "The Venture Capital Revolution: Fueling Innovation",
@@ -16,7 +128,7 @@
     },
     {
       "title": "The Cloud Computing Era: A New Business Model",
-      "content": "The dawn of cloud computing has revolutionized the technological landscape, offering unprecedented opportunities for innovation and entrepreneurship. This transformation, significantly shaped by pioneers like Amazon Web Services (AWS), has made cutting-edge technology infrastructure accessible to a broader audience, enabling even the most under-resourced visionaries to launch and scale business ventures. In exploring the cloud computing era’s development, we also uncover vital strategies for building an antifragile startup ecosystem, poised to withstand and grow from adversity.",
+      "content": "The dawn of cloud computing has revolutionized the technological landscape, offering unprecedented opportunities for innovation and entrepreneurship. This transformation, significantly shaped by pioneers like Amazon Web Services (AWS), has made cutting-edge technology infrastructure accessible to a broader audience, enabling even the most under-resourced visionaries to launch and scale business ventures. In exploring the cloud computing era's development, we also uncover vital strategies for building an antifragile startup ecosystem, poised to withstand and grow from adversity.",
       "date": "Oct 30",
       "content_type": "startup",
       "link": "https://i2u.ai/drpl/node/74"

@@ -45,15 +45,15 @@ const ContestTable = ({ imageUrl }) => {
           <tbody>
             {filteredEvents.map((contest, index) => (
               <tr key={index}>
-                <td>{contest.name}</td>
-                <td>
+                <td data-label="Name">{contest.name}</td>
+                <td data-label="Website">
                   <a href={contest.website} target="_blank" rel="noopener noreferrer">
                     {contest.website}
                   </a>
                 </td>
-                <td>{contest.date}</td>
-                <td>{contest.location}</td>
-                <td>
+                <td data-label="Date">{contest.date}</td>
+                <td data-label="Location">{contest.location}</td>
+                <td data-label="Image">
                   <img src={contest.url} alt={contest.name} className="contest-image" />
                 </td>
               </tr>
