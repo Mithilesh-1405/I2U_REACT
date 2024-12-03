@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../styling/navbar.scss";
 import logo from "../Assets/icons/i2u_logo.jpg";
+import ReservationModal from './ReservationModal';
 
 const CustomNavLink = ({ to, children, onClick }) => {
   return (
@@ -14,6 +15,7 @@ const CustomNavLink = ({ to, children, onClick }) => {
 function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isReservationModalOpen, setIsReservationModalOpen] = useState(false);
 
   useEffect(() => {
     const checkWidth = () => {
@@ -61,7 +63,10 @@ function Navbar() {
           <div className="navbar_1">
             <ul>
             <li>
-                <a href="https://i2u.ai/login.html">I2U.ai Ecosystem Reservation </a>
+                <a href="#" onClick={(e) => {
+                  e.preventDefault();
+                  setIsReservationModalOpen(true);
+                }}>I2U.ai Ecosystem Reservation </a>
               </li>
               <li>
                 <a href="https://i2u.ai/login.html">Login</a>
@@ -150,7 +155,10 @@ function Navbar() {
             <CustomNavLink to="/about">About Us</CustomNavLink>
           </li> */}
           <li>
-              <a href="https://i2u.ai/login.html">I2U.ai Ecosystem Reservation </a>
+            <a href="#" onClick={(e) => {
+              e.preventDefault();
+              setIsReservationModalOpen(true);
+            }}>I2U.ai Ecosystem Reservation </a>
           </li>
           <li>
             <a href="https://i2u.ai/login.html">Login</a>
@@ -163,6 +171,10 @@ function Navbar() {
           </li>
         </ul>
       </div>
+      <ReservationModal
+        isOpen={isReservationModalOpen}
+        onClose={() => setIsReservationModalOpen(false)}
+      />
     </nav>
   );
 }

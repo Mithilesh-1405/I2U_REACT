@@ -1,0 +1,27 @@
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0 10px 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  padding: 5px 10px;
+  
+  &:hover {
+    color: #000;
+  }
+}
+
+.modal-content {
+  height: calc(100% - 40px);
+  
+  iframe {
+    border: none;
+    border-radius: 4px;
+  }
+}
