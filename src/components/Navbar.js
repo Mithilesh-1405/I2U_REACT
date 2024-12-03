@@ -60,6 +60,9 @@ function Navbar() {
         <div className="navbar_wrapper">
           <div className="navbar_1">
             <ul>
+            <li>
+                <a href="https://i2u.ai/login.html">I2U.ai Ecosystem Reservation </a>
+              </li>
               <li>
                 <a href="https://i2u.ai/login.html">Login</a>
               </li>
@@ -146,6 +149,9 @@ function Navbar() {
           {/* <li>
             <CustomNavLink to="/about">About Us</CustomNavLink>
           </li> */}
+          <li>
+              <a href="https://i2u.ai/login.html">I2U.ai Ecosystem Reservation </a>
+          </li>
           <li>
             <a href="https://i2u.ai/login.html">Login</a>
           </li>

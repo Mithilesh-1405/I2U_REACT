@@ -3,7 +3,7 @@ import '../styling/FeaturesBenefits.scss';
 import Countdown from './Countdown';
 
 const FeaturesBenefits = ({price}) => {
-  const targetDate = '2024-11-30T11:59:00+05:30';
+  const targetDate = '2025-01-01T11:59:00+05:30';
   price = price.toLocaleString('en-IN', {
     style: 'currency',
     currency: 'INR',
@@ -75,7 +75,7 @@ const FeaturesBenefits = ({price}) => {
       <div className="price-highlight" onClick={() => window.location.href = 'https://i2u.ai/registration.html'}>
         <h2>Our Inaugural Invitation Price of ₹20,000 for Startups' Basic Annual Subscription</h2>
         <h3>is Going to be Raised to {price}!</h3>
-        <p>Hurry! Our Inaugural Invitation Price Offer Closes on 30th November 2023 at 11:59 AM IST.</p>
+        <p>Hurry! Our Inaugural Invitation Price Offer Closes on 1st January 2025 at 11:59 AM IST.</p>
         <h2 >Click Here to Subscribe!!</h2>
         <Countdown targetDate={targetDate} />
       </div>
