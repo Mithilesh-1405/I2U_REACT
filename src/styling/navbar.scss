@@ -19,7 +19,47 @@ nav {
     }
   }
 }
+#reservation_li{
+  display: flex;
+  div{
+    background-color: #f8ebff;
+    height: 8px;
+    width: 8px;
+    position: relative;
+    top: 15px;
+    margin: 0 5px ;
+    border-radius: 50%;
+    background-color: red;
+    border: none;
+    animation: glow 2s infinite;
+  }
+}
+@keyframes glow {
+  0% {
+    background-color: red;
+    box-shadow: 0 0 2px red;
+  }
+  50% {
+    background-color: white;
+    box-shadow: 0 0 2px white;
+  }
+  100% {
+    background-color: red;
+    box-shadow: 0 0 2px red;
+  }
+}
+#reservation_link {
+  background-color: #f8ebff;
+  padding: 10px;
+  border-radius: 2px;
+  color:rgb(58, 85, 121) ;
+  transition: all 0.2s ease-in;
+  &:hover{
+    background-color: #cdcfea;
+  }
+}
 .navbar_1 {
+  position: relative;
   ul {
     justify-content: flex-end;
     align-items: center;
@@ -31,7 +71,9 @@ nav {
       color: white;
     }
   }
+
 }
+
 .navbar_2 {
   display: flex;
   justify-content: center;

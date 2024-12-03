@@ -62,11 +62,13 @@ function Navbar() {
         <div className="navbar_wrapper">
           <div className="navbar_1">
             <ul>
-            <li>
-                <a href="#" onClick={(e) => {
+            <li id="reservation_li">
+                <div>
+                </div>
+                <a id="reservation_link" href="#" onClick={(e) => {
                   e.preventDefault();
                   setIsReservationModalOpen(true);
-                }}>I2U.ai Ecosystem Reservation </a>
+                }}>i2u.ai Ecosystem Reservation </a>
               </li>
               <li>
                 <a href="https://i2u.ai/login.html">Login</a>
@@ -154,11 +156,11 @@ function Navbar() {
           {/* <li>
             <CustomNavLink to="/about">About Us</CustomNavLink>
           </li> */}
-          <li>
-            <a href="#" onClick={(e) => {
+          <li >
+            <a id="reservation_link" href="#" onClick={(e) => {
               e.preventDefault();
               setIsReservationModalOpen(true);
-            }}>I2U.ai Ecosystem Reservation </a>
+            }}>i2u.ai Ecosystem Reservation </a>
           </li>
           <li>
             <a href="https://i2u.ai/login.html">Login</a>
