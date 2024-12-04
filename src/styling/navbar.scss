@@ -38,13 +38,16 @@ nav {
   0% {
     background-color: red;
   }
-  33% {
+  25% {
     background-color: #FFA500;
   }
-  66%{
+  50%{
     background-color: #00ff00 ;
   }
-  100% {
+  75%{
+    background-color: white ;
+  }
+  100%{
     background-color: red;
   }
 }
