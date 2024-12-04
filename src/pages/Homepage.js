@@ -47,7 +47,7 @@ function Homepage() {
   const sliderImages = [
     {
       url: res1,
-      title: "Kindly Reserve Your Membership, Now!",
+      title: "I2u.ai, Ideas through AI Ecosystem! Reservation",
       link: "https://i2u.ai/reservation.html",
       color:"blue",
       bgColor:"rgba(206, 206, 255,0.949)"
@@ -56,12 +56,12 @@ function Homepage() {
       url: res2,
       title: "I2u.ai, Ideas through AI Ecosystem! Reservation",
       link: "https://i2u.ai/reservation.html",
-      color:"purple",
+      color:"#4B5A20",
       bgColor:'rgba(248, 235, 255, 0.949)'
     },
     {
       url: res3,
-      title: "Please Click Here to Reserve Your Membership!",
+      title: "I2u.ai, Ideas through AI Ecosystem! Reservation",
       link: "https://i2u.ai/reservation.html",
       color:"green",
       bgColor:"rgba(149, 250, 236, 0.949)"
@@ -72,7 +72,7 @@ function Homepage() {
     <div className="home_container">
       <ImageSlider slides={sliderImages} />
       <HomepagePosts posts={data.homepage} images={images} />
-      
+
       <Footer />
     </div>
   );
