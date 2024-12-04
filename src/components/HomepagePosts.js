@@ -35,6 +35,9 @@ function HomepagePosts({ posts, images }) {
           );
         })}
       </div>
+      <div className="hp_more_btn_cont">
+        <button className="more_button" onClick={() => window.open('https://i2u.ai/drpl/', '_blank')}>... More</button>
+      </div>
     </div>
   );
 }

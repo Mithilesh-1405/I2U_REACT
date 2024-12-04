@@ -35,7 +35,7 @@ function Enablers() {
         <PostsClone posts={posts} images={images} />
       )}
       <div className="more_btn_cont">
-        <button className="more_button" onClick={() => window.open('https://i2u.ai/drpl/', '_blank')}>...More</button>
+        <button className="more_button" onClick={() => window.open('https://i2u.ai/drpl/', '_blank')}>... More</button>
       </div>
       <Footer/>
     </div>

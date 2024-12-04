@@ -26,10 +26,10 @@ function ImageSlider({ slides }) {
       <div className="slider_container_2">
         <div className={`slide ${fadeState}`}>
           <img src={slides[slideIndex].url} alt="slide_image" />
-          <div className="slide_content">
-            <p className="title">{slides[slideIndex].title}</p>
+          <div className="slide_content" style={{backgroundColor: slides[slideIndex].bgColor}}>
+            <p className="title" style={{color: slides[slideIndex].color}}>{slides[slideIndex].title}</p>
             <p className="link">
-              <a href={slides[slideIndex].link}>Read More</a>
+              <a href={slides[slideIndex].link}>Reserve Now</a>
             </p>
           </div>
         </div>
@@ -64,5 +64,3 @@ function ImageSlider({ slides }) {
 }
 
 export default ImageSlider;
-
-

@@ -68,7 +68,7 @@ function Navbar() {
                 <a id="reservation_link" href="#" onClick={(e) => {
                   e.preventDefault();
                   setIsReservationModalOpen(true);
-                }}>i2u.ai, Ideas to Unicorns through AI Ecosystem!</a>
+                }}>i2u.ai, Ideas to Unicorns through AI Ecosystem! Reservation</a>
                 <div>
                 </div>
               </li>

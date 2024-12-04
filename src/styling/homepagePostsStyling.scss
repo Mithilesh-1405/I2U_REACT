@@ -1,5 +1,7 @@
+$blue: #342dfc;
 .hpp_post_container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -207,7 +209,28 @@
     }
   }
 }
-
+.hp_more_btn_cont {
+  width: min(95%, calc(100% - 40px));
+  max-width: 1550px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+  padding: 0 clamp(8px, 1.5vw, 15px);
+  box-sizing: border-box;
+  
+  .more_button{
+    background-color: $blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+      background-color: #1e1f1f;
+    }
+  }
+}
 @media (max-width: 1200px) {
   .hpp_post_grid {
     width: min(90%, calc(100% - 30px)) !important;

@@ -19,10 +19,6 @@ function Startups() {
   const endpoint = process.env.REACT_APP_STARTUP;
   const images = [img3, img2, img4, img5, img1];
 
-  // useEffect(() => {
-  //   getPosts({ setArticles, setIsLoading, endpoint, setErrors });
-  // }, []);
-
   return (
     <div className="startups_container">
       <FeaturesBenefits price={40000} />
@@ -34,7 +30,7 @@ function Startups() {
         <PostsClone posts={posts} images={images} />
       )}
       <div className="more_btn_cont">
-        <button className="more_button" onClick={() => window.open('https://i2u.ai/drpl/', '_blank')}>...More</button>
+        <button className="more_button" onClick={() => window.open('https://i2u.ai/drpl/', '_blank')}>... More</button>
       </div>
       <Footer />
     </div>
