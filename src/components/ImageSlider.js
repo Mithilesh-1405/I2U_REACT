@@ -29,7 +29,7 @@ function ImageSlider({ slides }) {
           <div className="slide_content" style={{backgroundColor: slides[slideIndex].bgColor}}>
             <p className="title" style={{color: slides[slideIndex].color}}>{slides[slideIndex].title}</p>
             <p className="link">
-              <a href={slides[slideIndex].link}>Reserve Now</a>
+              <a href={slides[slideIndex].link}>Please Click Here to Reserve!</a>
             </p>
           </div>
         </div>
