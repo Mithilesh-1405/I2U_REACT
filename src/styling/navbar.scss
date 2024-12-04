@@ -21,45 +21,47 @@ nav {
 }
 #reservation_li{
   display: flex;
+  width: 70%;
+
   div{
-    background-color: #f8ebff;
-    height: 8px;
-    width: 8px;
+    height: 20px;
+    width: 20px;
     position: relative;
     top: 15px;
     margin: 0 5px ;
     border-radius: 50%;
     background-color: red;
-    border: none;
-    animation: glow 2s infinite;
+    animation: glow 3s infinite;
   }
 }
 @keyframes glow {
   0% {
     background-color: red;
-    box-shadow: 0 0 2px red;
   }
-  50% {
-    background-color: white;
-    box-shadow: 0 0 2px white;
+  33% {
+    background-color: #FFA500;
+  }
+  66%{
+    background-color: #00ff00 ;
   }
   100% {
     background-color: red;
-    box-shadow: 0 0 2px red;
   }
 }
 #reservation_link {
+  text-align: center;
+  font-size: 28px;
   background-color: #f8ebff;
   padding: 10px;
   border-radius: 2px;
   color:rgb(58, 85, 121) ;
+  width: 100%;
   transition: all 0.2s ease-in;
   &:hover{
     background-color: #cdcfea;
   }
 }
 .navbar_1 {
-  position: relative;
   ul {
     justify-content: flex-end;
     align-items: center;
