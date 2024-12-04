@@ -14,7 +14,7 @@ const ReservationModal = ({ isOpen, onClose }) => {
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, 0)',
-      width: '65%',
+      width: '165%',
       height: '75vh',
       padding: '20px',
       border: 'none',
@@ -34,15 +34,15 @@ const ReservationModal = ({ isOpen, onClose }) => {
       style={customStyles}
       contentLabel="Reservation Modal"
     >
-      <div className="modal-header">
+      <div className="modal-header" style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '30px' }}>
         <button onClick={onClose} className="close-button">×</button>
       </div>
       <div className="modal-content">
         <iframe
           src="https://i2u.ai/reservation.html"
-          title="Reservation Form"
           width="100%"
           height="100%"
+          title="Reservation Form"
           frameBorder="0"
         />
       </div>
