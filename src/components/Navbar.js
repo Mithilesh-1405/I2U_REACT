@@ -158,12 +158,16 @@ function Navbar() {
           {/* <li>
             <CustomNavLink to="/about">About Us</CustomNavLink>
           </li> */}
-          <li >
-            <a id="reservation_link" href="#" onClick={(e) => {
-              e.preventDefault();
-              setIsReservationModalOpen(true);
-            }}>i2u.ai Ecosystem Reservation </a>
-          </li>
+          <li id="reservation_li">
+                <div>
+                </div>
+                <a id="reservation_link" href="#" onClick={(e) => {
+                  e.preventDefault();
+                  setIsReservationModalOpen(true);
+                }}>i2u.ai, Ideas to Unicorns through AI Ecosystem! Reservation</a>
+                <div>
+                </div>
+              </li>
           <li>
             <a href="https://i2u.ai/login.html">Login</a>
           </li>
