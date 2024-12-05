@@ -35,7 +35,8 @@ const Referral = () => {
           <li>Initial Tier: Based on reservation time within the initial 1,000 memberships.</li>
           <li>Tier Upgrades: Members can upgrade their tier by referring new members. A real-time Referral Leaderboard ranks members by successful referrals. Top-ranked members may be eligible for tier upgrades.</li>
         </ul>
-        <p>Existing i2u.ai Subscribers: Current subscribers receive a complimentary Ecosystem Membership. Their initial tier will be determined and communicated to them directly.</p>
+        <h3 className="subsection-title">Existing i2u.ai Subscribers</h3>
+        <p>Current subscribers receive a complimentary Ecosystem Membership. Their initial tier will be determined and communicated to them directly.</p>
 
         <h2 className="section-title">2. Referral Reward System</h2>
         <p>This system applies to all Ecosystem Members.</p>
