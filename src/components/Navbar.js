@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import "../styling/navbar.scss";
 import logo from "../Assets/icons/i2u_logo.jpg";
 import ReservationModal from './ReservationModal';
+import LoginModal from './LoginModal';
+import SignupModal from './SignupModal';
 
 const CustomNavLink = ({ to, children, onClick }) => {
   return (
@@ -16,6 +18,8 @@ function Navbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isReservationModalOpen, setIsReservationModalOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
 
   useEffect(() => {
     const checkWidth = () => {
@@ -73,10 +77,16 @@ function Navbar() {
                 </div>
               </li>
               <li>
-                <a href="https://i2u.ai/login.html">Login</a>
+                <a href="#" onClick={(e) => {
+                  e.preventDefault();
+                  setIsLoginModalOpen(true);
+                }}>Login</a>
               </li>
               <li>
-                <a href="https://i2u.ai/userRegistration.html">Signup</a>
+                <a href="#" onClick={(e) => {
+                  e.preventDefault();
+                  setIsSignupModalOpen(true);
+                }}>Signup</a>
               </li>
               <li>
                 <a href="mailto:admin@i2u.ai" onClick={handleEmailClick}>Contact Us</a>
@@ -169,10 +179,16 @@ function Navbar() {
                 </div>
               </li>
           <li>
-            <a href="https://i2u.ai/login.html">Login</a>
+            <a href="#" onClick={(e) => {
+              e.preventDefault();
+              setIsLoginModalOpen(true);
+            }}>Login</a>
           </li>
           <li>
-            <a href="https://i2u.ai/userRegistration.html">Signup</a>
+            <a href="#" onClick={(e) => {
+              e.preventDefault();
+              setIsSignupModalOpen(true);
+            }}>Signup</a>
           </li>
           <li>
             <a href="mailto:admin@i2u.ai" onClick={handleEmailClick}>Contact Us</a>
@@ -182,6 +198,14 @@ function Navbar() {
       <ReservationModal
         isOpen={isReservationModalOpen}
         onClose={() => setIsReservationModalOpen(false)}
+      />
+      <LoginModal
+        isOpen={isLoginModalOpen}
+        onClose={() => setIsLoginModalOpen(false)}
+      />
+      <SignupModal
+        isOpen={isSignupModalOpen}
+        onClose={() => setIsSignupModalOpen(false)}
       />
     </nav>
   );

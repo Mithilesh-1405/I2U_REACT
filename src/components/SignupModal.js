@@ -2,13 +2,12 @@ import React from 'react';
 import Modal from 'react-modal';
 import '../styling/reservationModal.scss';
 
-// Bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#root');
 
-const ReservationModal = ({ isOpen, onClose }) => {
+const SignupModal = ({ isOpen, onClose }) => {
   const customStyles = {
     content: {
-      top: '12%',
+      top: '10%',
       left: '50%',
       right: 'auto',
       bottom: 'auto',
@@ -32,17 +31,17 @@ const ReservationModal = ({ isOpen, onClose }) => {
       isOpen={isOpen}
       onRequestClose={onClose}
       style={customStyles}
-      contentLabel="Reservation Modal"
+      contentLabel="Signup Modal"
     >
       <div className="modal-header" style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '30px' }}>
         <button onClick={onClose} className="close-button">×</button>
       </div>
       <div className="modal-content">
         <iframe
-          src="https://i2u.ai/reservation.html"
+          src="https://i2u.ai/userRegistration.html"
           width="100%"
           height="100%"
-          title="Reservation Form"
+          title="Signup Form"
           frameBorder="0"
         />
       </div>
@@ -50,4 +49,4 @@ const ReservationModal = ({ isOpen, onClose }) => {
   );
 };
 
-export default ReservationModal;
+export default SignupModal;
