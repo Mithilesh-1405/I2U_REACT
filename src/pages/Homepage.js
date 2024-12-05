@@ -47,24 +47,24 @@ function Homepage() {
   const sliderImages = [
     {
       url: res1,
-      title: "I2u.ai, Ideas through AI Ecosystem! Reservation",
+      title: "i2u.ai, Ideas through AI Ecosystem! Reservation",
       link: "https://i2u.ai/reservation.html",
-      color:"blue",
+      color:"#00008b",
       bgColor:"rgba(206, 206, 255,0.949)"
     },
     {
       url: res2,
-      title: "I2u.ai, Ideas through AI Ecosystem! Reservation",
+      title: "i2u.ai, Ideas through AI Ecosystem! Reservation",
       link: "https://i2u.ai/reservation.html",
-      color:"#4B5A20",
-      bgColor:'rgba(248, 235, 255, 0.949)'
+      color:"#004c4c  ",
+      bgColor:'rgba(248, 235, 255, 1)'
     },
     {
       url: res3,
-      title: "I2u.ai, Ideas through AI Ecosystem! Reservation",
+      title: "i2u.ai, Ideas through AI Ecosystem! Reservation",
       link: "https://i2u.ai/reservation.html",
-      color:"green",
-      bgColor:"rgba(149, 250, 236, 0.949)"
+      color:"#006400",
+      bgColor:"rgba(149, 250, 236, 1)"
     },
   ];
 
