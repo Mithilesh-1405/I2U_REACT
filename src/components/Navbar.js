@@ -5,6 +5,7 @@ import logo from "../Assets/icons/i2u_logo.jpg";
 import ReservationModal from './ReservationModal';
 import LoginModal from './LoginModal';
 import SignupModal from './SignupModal';
+import SubscriptionModal from './SubscriptionModal';
 
 const CustomNavLink = ({ to, children, onClick }) => {
   return (
@@ -20,6 +21,7 @@ function Navbar() {
   const [isReservationModalOpen, setIsReservationModalOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
+  const [isSubscriptionModalOpen, setIsSubscriptionModalOpen] = useState(false);
 
   useEffect(() => {
     const checkWidth = () => {
@@ -88,6 +90,12 @@ function Navbar() {
                   setIsSignupModalOpen(true);
                 }}>Signup</a>
               </li>
+              <li>
+                <a href="#" onClick={(e) => {
+                  e.preventDefault();
+                  setIsSubscriptionModalOpen(true);
+                }}>Subscription</a>
+            </li>
               <li>
                 <a href="mailto:admin@i2u.ai" onClick={handleEmailClick}>Contact Us</a>
               </li>
@@ -191,6 +199,12 @@ function Navbar() {
             }}>Signup</a>
           </li>
           <li>
+            <a href="#" onClick={(e) => {
+              e.preventDefault();
+              setIsSubscriptionModalOpen(true);
+            }}>Subscription</a>
+          </li>
+          <li>
             <a href="mailto:admin@i2u.ai" onClick={handleEmailClick}>Contact Us</a>
           </li>
         </ul>
@@ -206,6 +220,10 @@ function Navbar() {
       <SignupModal
         isOpen={isSignupModalOpen}
         onClose={() => setIsSignupModalOpen(false)}
+      />
+      <SubscriptionModal
+        isOpen={isSubscriptionModalOpen}
+        onClose={() => setIsSubscriptionModalOpen(false)}
       />
     </nav>
   );

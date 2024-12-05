@@ -10,8 +10,8 @@ nav {
     display: flex;
     li {
       list-style: none;
-      padding: 17px;
-      margin: 0 10px;
+      padding: 15px;
+      margin: 0 5px;
       a {
         text-decoration: none;
         position: relative;
@@ -21,7 +21,7 @@ nav {
 }
 #reservation_li{
   display: flex;
-  width: 70%;
+  width: 65%;
 
   div{
     height: 18px;
@@ -63,9 +63,9 @@ nav {
   }}
 #reservation_link {
   text-align: center;
-  font-size: 28px;
+  font-size: 26px;
   background-color: #f8ebff;
-  padding: 10px;
+  padding: 8px;
   border-radius: 2px;
   color:rgb(58, 85, 121) ;
   width: 100%;
