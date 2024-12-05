@@ -31,7 +31,7 @@ const SubscriptionModal = ({ isOpen, onClose }) => {
       isOpen={isOpen}
       onRequestClose={onClose}
       style={customStyles}
-      contentLabel="Signup Modal"
+      contentLabel="subscription Modal"
     >
       <div className="modal-header" style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '30px' }}>
         <button onClick={onClose} className="close-button">×</button>
@@ -41,7 +41,7 @@ const SubscriptionModal = ({ isOpen, onClose }) => {
           src="https://i2u.ai/subscription.html"
           width="100%"
           height="100%"
-          title="Signup Form"
+          title="subscription Form"
           frameBorder="0"
         />
       </div>

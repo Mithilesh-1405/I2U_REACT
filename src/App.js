@@ -9,6 +9,9 @@ import Series from "./pages/Series";
 import AdminAuth from "./components/AdminAuth";
 import IndividualPost from './components/IndividualPost'
 import Footer from "./components/Footer";
+import Terms from "./components/Terms";
+import Referral from "./components/Referral";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
             <Route path="/i2useries" element={<Series />} />
             <Route path="/adminPublish" element={<AdminAuth />} />
             <Route path="/post/:id" element={<IndividualPost />} />
+            <Route path="/terms-n-conditions" element={<Terms/>} />
+            <Route path="/referral-rewards" element={<Referral/>} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </main>
       </div>
