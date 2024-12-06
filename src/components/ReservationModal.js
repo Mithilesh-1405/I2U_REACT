@@ -14,7 +14,7 @@ const ReservationModal = ({ isOpen, onClose }) => {
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, 0)',
-      width: '65%',
+      width: '50%',
       height: '75vh',
       padding: '20px',
       border: 'none',

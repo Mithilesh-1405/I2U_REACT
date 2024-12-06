@@ -6,6 +6,7 @@ import ReservationModal from './ReservationModal';
 import LoginModal from './LoginModal';
 import SignupModal from './SignupModal';
 import SubscriptionModal from './SubscriptionModal';
+import PreviewModal from './PreviewModal';
 
 const CustomNavLink = ({ to, children, onClick }) => {
   return (
@@ -22,6 +23,7 @@ function Navbar() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
   const [isSubscriptionModalOpen, setIsSubscriptionModalOpen] = useState(false);
+  const [isPreviewModalOpen, setIsPreviewModalOpen] = useState(false);
 
   useEffect(() => {
     const checkWidth = () => {
@@ -60,6 +62,18 @@ function Navbar() {
   const handleEmailClick = (e) => {
     e.preventDefault();
     window.open('https://mail.google.com/mail/?view=cm&fs=1&to=admin@i2u.ai', '_blank');
+  };
+
+  const openPreviewModal = () => {
+    setIsPreviewModalOpen(true);
+  };
+
+  const closePreviewModal = () => {
+    setIsPreviewModalOpen(false);
+  };
+
+  const closeSubscriptionModal = () => {
+    setIsSubscriptionModalOpen(false);
   };
 
   return (
@@ -146,6 +160,9 @@ function Navbar() {
               <li>
                 <CustomNavLink to="/enablers">Enablers</CustomNavLink>
               </li>
+              <li>
+            <a href="#" onClick={(e) => { e.preventDefault(); openPreviewModal(); handleSidebarLinkClick(); }}>Preview</a>
+          </li>
               {/* <li>
                 <CustomNavLink to="/i2useries">What We Do</CustomNavLink>
               </li> */}
@@ -164,18 +181,12 @@ function Navbar() {
           <li>
             <CustomNavLink to="/mentors" onClick={handleSidebarLinkClick}>Mentors</CustomNavLink>
           </li>
-          {/* <li>
-            <CustomNavLink to="/investors">Investors</CustomNavLink>
-          </li> */}
           <li>
             <CustomNavLink to="/enablers" onClick={handleSidebarLinkClick}>Enablers</CustomNavLink>
           </li>
-          {/* <li>
-            <CustomNavLink to="/i2useries" onClick={handleSidebarLinkClick}>What We Do</CustomNavLink>
-          </li> */}
-          {/* <li>
-            <CustomNavLink to="/about">About Us</CustomNavLink>
-          </li> */}
+          <li>
+            <a href="#" onClick={(e) => { e.preventDefault(); openPreviewModal(); handleSidebarLinkClick(); }}>Preview</a>
+          </li>
           <li id="reservation_li">
                 <div>
                 </div>
@@ -223,7 +234,11 @@ function Navbar() {
       />
       <SubscriptionModal
         isOpen={isSubscriptionModalOpen}
-        onClose={() => setIsSubscriptionModalOpen(false)}
+        onRequestClose={closeSubscriptionModal}
+      />
+      <PreviewModal
+        isOpen={isPreviewModalOpen}
+        onRequestClose={closePreviewModal}
       />
     </nav>
   );
