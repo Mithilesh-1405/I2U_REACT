@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 import "../styling/pageStyling.scss";
 import "react-loading-skeleton/dist/skeleton.css";
 import SkeletonCard from "../Loading_UI/SkeletonCard";
-import AIRiseContent from "../components/AIRiseContent";
+import EnablerBenefits from "../components/EnablerBenefits";
 import Footer from "../components/Footer";
 import { getPosts, handleSorting } from "../Modules/GetPostModule";
 import postsData from "../Assets/data/data.json";
@@ -26,7 +26,7 @@ function Enablers() {
   // }, []);
   return (
     <div className="startups_container">
-      <AIRiseContent />
+      <EnablerBenefits/>
       {isLoading ? (
         <SkeletonCard cards={5} />
       ) : errors ? (

@@ -2,15 +2,19 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../styling/navbar.scss";
 import logo from "../Assets/icons/i2u_logo.jpg";
-import ReservationModal from './ReservationModal';
-import LoginModal from './LoginModal';
-import SignupModal from './SignupModal';
-import SubscriptionModal from './SubscriptionModal';
-import PreviewModal from './PreviewModal';
+import ReservationModal from "./ReservationModal";
+import LoginModal from "./LoginModal";
+import SignupModal from "./SignupModal";
+import SubscriptionModal from "./SubscriptionModal";
+import PreviewModal from "./PreviewModal";
 
 const CustomNavLink = ({ to, children, onClick }) => {
   return (
-    <NavLink to={to} className={({ isActive }) => (isActive ? "active" : "")} onClick={onClick}>
+    <NavLink
+      to={to}
+      className={({ isActive }) => (isActive ? "active" : "")}
+      onClick={onClick}
+    >
       {children}
     </NavLink>
   );
@@ -61,7 +65,10 @@ function Navbar() {
 
   const handleEmailClick = (e) => {
     e.preventDefault();
-    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=admin@i2u.ai', '_blank');
+    window.open(
+      "https://mail.google.com/mail/?view=cm&fs=1&to=admin@i2u.ai",
+      "_blank"
+    );
   };
 
   const openPreviewModal = () => {
@@ -82,17 +89,21 @@ function Navbar() {
         <div className="navbar_wrapper">
           <div className="navbar_1">
             <ul>
-            <li id="reservation_li">
-                <div>
-                </div>
-                <a id="reservation_link" href="#" onClick={(e) => {
-                  e.preventDefault();
-                  setIsReservationModalOpen(true);
-                }}>i2u.ai, Ideas to Unicorns through AI Ecosystem! Reservation</a>
-                <div>
-                </div>
+              <li id="reservation_li">
+                <div></div>
+                <a
+                  id="reservation_link"
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsReservationModalOpen(true);
+                  }}
+                >
+                  i2u.ai, Ideas to Unicorns through AI Ecosystem! Reservation
+                </a>
+                <div></div>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" onClick={(e) => {
                   e.preventDefault();
                   setIsLoginModalOpen(true);
@@ -109,9 +120,11 @@ function Navbar() {
                   e.preventDefault();
                   setIsSubscriptionModalOpen(true);
                 }}>Subscription</a>
-            </li>
+            </li> */}
               <li>
-                <a href="mailto:admin@i2u.ai" onClick={handleEmailClick}>Contact Us</a>
+                <a href="mailto:admin@i2u.ai" onClick={handleEmailClick}>
+                  Contact Us
+                </a>
               </li>
             </ul>
           </div>
@@ -154,15 +167,18 @@ function Navbar() {
               <li>
                 <CustomNavLink to="/mentors">Mentors</CustomNavLink>
               </li>
-              {/* <li>
-                <CustomNavLink to="/investors">Investors</CustomNavLink>
-              </li> */}
               <li>
                 <CustomNavLink to="/enablers">Enablers</CustomNavLink>
               </li>
               <li>
+                <CustomNavLink to="/influencers">influencers</CustomNavLink>
+              </li>
+              <li>
+                <CustomNavLink to="/facilitators">facilitators</CustomNavLink>
+              </li>
+              {/* <li>
             <a href="#" onClick={(e) => { e.preventDefault(); openPreviewModal(); handleSidebarLinkClick(); }}>Preview</a>
-          </li>
+          </li> */}
               {/* <li>
                 <CustomNavLink to="/i2useries">What We Do</CustomNavLink>
               </li> */}
@@ -176,28 +192,45 @@ function Navbar() {
       <div className="sidebar">
         <ul>
           <li>
-            <CustomNavLink to="/startups" onClick={handleSidebarLinkClick}>Startup</CustomNavLink>
+            <CustomNavLink to="/startups" onClick={handleSidebarLinkClick}>
+              Startup
+            </CustomNavLink>
           </li>
           <li>
-            <CustomNavLink to="/mentors" onClick={handleSidebarLinkClick}>Mentors</CustomNavLink>
+            <CustomNavLink to="/mentors" onClick={handleSidebarLinkClick}>
+              Mentors
+            </CustomNavLink>
           </li>
           <li>
-            <CustomNavLink to="/enablers" onClick={handleSidebarLinkClick}>Enablers</CustomNavLink>
+            <CustomNavLink to="/enablers" onClick={handleSidebarLinkClick}>
+              Enablers
+            </CustomNavLink>
           </li>
           <li>
-            <a href="#" onClick={(e) => { e.preventDefault(); openPreviewModal(); handleSidebarLinkClick(); }}>Preview</a>
+            <CustomNavLink to="/influencers" onClick={handleSidebarLinkClick}>
+              influencers
+            </CustomNavLink>
+          </li>
+          <li>
+            <CustomNavLink to="/facilitators" onClick={handleSidebarLinkClick}>
+              facilitators
+            </CustomNavLink>
           </li>
           <li id="reservation_li">
-                <div>
-                </div>
-                <a id="reservation_link" href="#" onClick={(e) => {
-                  e.preventDefault();
-                  setIsReservationModalOpen(true);
-                }}>i2u.ai, Ideas to Unicorns through AI Ecosystem! Reservation</a>
-                <div>
-                </div>
-              </li>
-          <li>
+            <div></div>
+            <a
+              id="reservation_link"
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setIsReservationModalOpen(true);
+              }}
+            >
+              i2u.ai, Ideas to Unicorns through AI Ecosystem! Reservation
+            </a>
+            <div></div>
+          </li>
+          {/* <li>
             <a href="#" onClick={(e) => {
               e.preventDefault();
               setIsLoginModalOpen(true);
@@ -214,9 +247,11 @@ function Navbar() {
               e.preventDefault();
               setIsSubscriptionModalOpen(true);
             }}>Subscription</a>
-          </li>
+          </li> */}
           <li>
-            <a href="mailto:admin@i2u.ai" onClick={handleEmailClick}>Contact Us</a>
+            <a href="mailto:admin@i2u.ai" onClick={handleEmailClick}>
+              Contact Us
+            </a>
           </li>
         </ul>
       </div>
@@ -235,10 +270,6 @@ function Navbar() {
       <SubscriptionModal
         isOpen={isSubscriptionModalOpen}
         onClose={() => setIsSubscriptionModalOpen(false)}
-      />
-      <PreviewModal
-        isOpen={isPreviewModalOpen}
-        onClose={() => setIsPreviewModalOpen(false)}
       />
     </nav>
   );

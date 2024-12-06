@@ -7,7 +7,7 @@ $highlight-color: #ff5722;
 $border-radius: 8px;
 $box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 $box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
-
+$accent-color: #1a237e;
 // Mixins
 @mixin card-base {
   background-color: $primary-bg;
@@ -26,7 +26,30 @@ $box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   padding: 20px;
 }
+.cta-section {
+  background-color: $accent-color;
+  padding: 40px;
+  color: white;
+  border-radius: $border-radius;
+  text-align: center;
+  margin-top: 30px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(60, 76, 185) !important;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
 
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
 .feature-section {
   @include card-base;
   padding: 25px;
@@ -42,9 +65,11 @@ $box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
     h3 {
       color: $subtitle-color;
       margin: 20px 0 10px;
-      font-size: 1.3rem;
+      font-size: 1.7rem;
     }
-
+    h4{
+      color: $subtitle-color;
+    }
     p {
       margin-bottom: 20px;
       line-height: 1.6;

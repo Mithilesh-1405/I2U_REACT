@@ -12,6 +12,7 @@ import img2 from '../Assets/images/post_images/m2.png';
 import img3 from '../Assets/images/post_images/m3.jpeg';
 import img4 from '../Assets/images/post_images/m4.jpg';
 import img5 from '../Assets/images/post_images/m5.jpg';
+import MentorBenefits from "../components/MentorBenefits";
 
 
 function Mentors() {
@@ -28,7 +29,7 @@ function Mentors() {
 
   return (
     <div className="startups_container">
-      <FeaturesBenefits price={50000}/>
+      <MentorBenefits price={50000}/>
       {isLoading ? (
         <SkeletonCard cards={5} />
       ) : errors ? (

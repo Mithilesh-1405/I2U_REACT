@@ -56,7 +56,7 @@ function Homepage() {
       url: res2,
       title: "i2u.ai, Ideas through AI Ecosystem! Reservation",
       link: "https://i2u.ai/reservation.html",
-      // color:"#C19A6B",
+      color:"#d60084",
       bgColor:'rgba(248, 235, 255, 1)'
     },
     {
