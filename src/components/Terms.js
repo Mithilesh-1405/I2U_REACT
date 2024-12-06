@@ -102,15 +102,10 @@ const Terms = () => {
 
         <h2 className="section-title">20. Contact Us</h2>
         <p>If you have any questions about these Terms, please contact us at admin@i2u.ai</p>
-        <p>Our contact information and full operational address:</p>
-        <p>Girish B Hukkeri<br />
-        64, 2nd Cross, 2nd Stage, BEML Layout<br />
-        Basaveshwaranagar, Bangalore - 560079<br />
-        Karnataka, India<br />
-        Contact on: +91 7760937549 (Whatsapp Preferred)</p>
+        <p>Our contact information and full operational address: Girish B Hukkeri, 64, 2nd Cross, 2nd Stage, BEML Layout, Basaveshwaranagar, Bangalore - 560079, Karnataka, India Contact on: +91 7760937549 (Whatsapp Preferred)</p>
 
         <div className="disclaimer">
-          <h2>Disclaimer</h2>
+          <h1 style={{textAlign:"center"}}>Disclaimer</h1>
           <p>The content, reports and assessments have been generated using our AI-based platform, which leverages empirical data, information, knowledge, and wisdom gained from various AI platforms and sources within the startup ecosystem.</p>
           <p>Please note the following:</p>
           <ul>
