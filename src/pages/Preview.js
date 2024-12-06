@@ -35,16 +35,17 @@ const Preview = () => {
   }, []);
 
   return (
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center"}}>
         <div
           style={{
             width: "80%",
-            height: "70vh",
+            height: "73vh",
             marginTop: "20px",
             marginBottom: "20px",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            backgroundColor:"white"
           }}
         >
           <iframe
@@ -53,7 +54,7 @@ const Preview = () => {
               width: "100%",
               height: "100%",
               border: "none",
-              backgroundColor: "white",
+
             }}
             title="Preview"
             frameBorder="0"
