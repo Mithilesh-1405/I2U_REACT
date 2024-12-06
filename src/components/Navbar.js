@@ -171,10 +171,13 @@ function Navbar() {
                 <CustomNavLink to="/enablers">Enablers</CustomNavLink>
               </li>
               <li>
-                <CustomNavLink to="/influencers">influencers</CustomNavLink>
+                <CustomNavLink to="/influencers">Influencers</CustomNavLink>
               </li>
               <li>
-                <CustomNavLink to="/facilitators">facilitators</CustomNavLink>
+                <CustomNavLink to="/facilitators">Facilitators</CustomNavLink>
+              </li>
+              <li>
+                <CustomNavLink to="/investors">Investors</CustomNavLink>
               </li>
               {/* <li>
             <a href="#" onClick={(e) => { e.preventDefault(); openPreviewModal(); handleSidebarLinkClick(); }}>Preview</a>

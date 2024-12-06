@@ -35,8 +35,6 @@ const Preview = () => {
   }, []);
 
   return (
-    <div>
-      <ImageSlider slides={sliderImages} />
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div
           style={{
@@ -55,6 +53,7 @@ const Preview = () => {
               width: "100%",
               height: "100%",
               border: "none",
+              backgroundColor: "white",
             }}
             title="Preview"
             frameBorder="0"
@@ -62,7 +61,7 @@ const Preview = () => {
         </div>
         <Footer />
       </div>
-    </div>
+
   );
 };
 

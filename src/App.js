@@ -15,6 +15,7 @@ import Terms from "./components/Terms";
 import Referral from "./components/Referral";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Preview from "./pages/Preview";
+import Investors from "./pages/Investors";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/enablers" element={<Enablers />} />
             <Route path="/i2useries" element={<Series />} />
             <Route path="/facilitators" element={<Facilitators />} />
+            <Route path="/investors" element={<Investors />} />
             <Route path="/influencers" element={<Influencers />} />
             <Route path="/preview" element={<Preview />} />
             <Route path="/adminPublish" element={<AdminAuth />} />
