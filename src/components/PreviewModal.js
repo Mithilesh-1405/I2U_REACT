@@ -1,10 +1,13 @@
 import React from 'react';
 import Modal from 'react-modal';
+import '../styling/reservationModal.scss';
 
-const PreviewModal = ({ isOpen, onRequestClose }) => {
+Modal.setAppElement('#root');
+
+const PreviewModal = ({ isOpen, onClose }) => {
   const customStyles = {
     content: {
-      top: '12%',
+      top: '10%',
       left: '50%',
       right: 'auto',
       bottom: 'auto',
@@ -26,39 +29,20 @@ const PreviewModal = ({ isOpen, onRequestClose }) => {
   return (
     <Modal
       isOpen={isOpen}
-      onRequestClose={onRequestClose}
+      onRequestClose={onClose}
       style={customStyles}
       contentLabel="Preview Modal"
-      ariaHideApp={false}
     >
-      <div style={{ width: '100%', height: '100%', position: 'relative' }}>
-        <button
-          onClick={onRequestClose}
-          style={{
-            position: 'absolute',
-            right: '10px',
-            top: '10px',
-            background: 'white',
-            border: 'none',
-            borderRadius: '50%',
-            width: '30px',
-            height: '30px',
-            cursor: 'pointer',
-            zIndex: 1
-          }}
-        >
-          ×
-        </button>
+      <div className="modal-header" style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '30px' }}>
+        <button onClick={onClose} className="close-button">×</button>
+      </div>
+      <div className="modal-content">
         <iframe
           src="https://i2u.ai/preview.html"
-          style={{
-            width: '100%',
-            height: '100%',
-            border: 'none',
-            borderRadius: '8px',
-            backgroundColor: 'white'
-          }}
+          width="100%"
+          height="100%"
           title="Preview"
+          frameBorder="0"
         />
       </div>
     </Modal>

@@ -234,11 +234,11 @@ function Navbar() {
       />
       <SubscriptionModal
         isOpen={isSubscriptionModalOpen}
-        onRequestClose={closeSubscriptionModal}
+        onClose={() => setIsSubscriptionModalOpen(false)}
       />
       <PreviewModal
         isOpen={isPreviewModalOpen}
-        onRequestClose={closePreviewModal}
+        onClose={() => setIsPreviewModalOpen(false)}
       />
     </nav>
   );

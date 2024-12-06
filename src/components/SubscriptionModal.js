@@ -7,7 +7,7 @@ Modal.setAppElement('#root');
 const SubscriptionModal = ({ isOpen, onClose }) => {
   const customStyles = {
     content: {
-      top: '10%',
+      top: '12%',
       left: '50%',
       right: 'auto',
       bottom: 'auto',
@@ -31,7 +31,7 @@ const SubscriptionModal = ({ isOpen, onClose }) => {
       isOpen={isOpen}
       onRequestClose={onClose}
       style={customStyles}
-      contentLabel="subscription Modal"
+      contentLabel="Subscription Modal"
     >
       <div className="modal-header" style={{ display: 'flex', justifyContent: 'flex-end', paddingRight: '30px' }}>
         <button onClick={onClose} className="close-button">×</button>
@@ -41,7 +41,7 @@ const SubscriptionModal = ({ isOpen, onClose }) => {
           src="https://i2u.ai/subscription.html"
           width="100%"
           height="100%"
-          title="subscription Form"
+          title="Subscription Form"
           frameBorder="0"
         />
       </div>

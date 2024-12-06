@@ -2,7 +2,6 @@ import React from 'react';
 import Modal from 'react-modal';
 import '../styling/reservationModal.scss';
 
-// Bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#root');
 
 const ReservationModal = ({ isOpen, onClose }) => {
